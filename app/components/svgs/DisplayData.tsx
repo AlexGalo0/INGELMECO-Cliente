@@ -1,12 +1,11 @@
 const DisplayData: React.FC = () => {
   return (
     <svg
-      xmlns="http://www.w3.org/2000/svg"
-      data-name="Layer 1"
-      width="400"
-      height="340"
-      viewBox="0 0 841.59024 589"
-      xmlnsXlink="http://www.w3.org/1999/xlink"
+    xmlns="http://www.w3.org/2000/svg"
+    data-name="Layer 1"
+    viewBox="0 0 841.59024 589"
+    xmlnsXlink="http://www.w3.org/1999/xlink"
+    
     >
       <polygon
         points="743.208 574.193 729.128 574.192 722.43 519.885 743.21 519.886 743.208 574.193"

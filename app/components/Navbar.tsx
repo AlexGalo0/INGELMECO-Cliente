@@ -1,13 +1,28 @@
 "use client"
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef, MouseEvent } from "react";
 
 const Navbar: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const menuRef = useRef<HTMLDivElement | null>(null);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
+
+  const closeMenu = (e: MouseEvent) => {
+    if (menuRef.current && !menuRef.current.contains(e.target as Node)) {
+      setMenuOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("mousedown", closeMenu);
+
+    return () => {
+      document.removeEventListener("mousedown", closeMenu);
+    };
+  }, []);
 
   return (
     <nav className="bg-[#1E1E1E] min-w-[350px]">
@@ -60,7 +75,10 @@ const Navbar: React.FC = () => {
       </div>
 
       {menuOpen && (
-        <div className="fixed top-0 right-0 h-screen w-3/5 bg-opacity-80 bg-[#1E1E1E] backdrop-blur">
+        <div
+          ref={menuRef}
+          className="fixed top-0 right-0 h-screen w-3/5 bg-opacity-80 bg-[#1E1E1E] backdrop-blur"
+        >
           <div className="h-screen flex flex-col justify-start p-4">
             <a href="#" className="text-white font-bold text-1xl my-4">
               Contáctanos
@@ -74,12 +92,7 @@ const Navbar: React.FC = () => {
             <a href="#" className="text-white font-bold text-1xl my-4">
               Sobre Nosotros
             </a>
-            <button
-              onClick={toggleMenu}
-              className="text-white font-bold text-1xl my-4 hover:underline focus:outline-none"
-            >
-              Cerrar Menú
-            </button>
+            
           </div>
         </div>
       )}
@@ -88,4 +101,3 @@ const Navbar: React.FC = () => {
 };
 
 export default Navbar;
-

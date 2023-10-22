@@ -10,7 +10,7 @@ const Navbar: React.FC = () => {
     setMenuOpen(!menuOpen);
   };
 
-  const closeMenu = (e: MouseEvent) => {
+  const closeMenu = (e: MouseEvent | any) => {
     if (menuRef.current && !menuRef.current.contains(e.target as Node)) {
       setMenuOpen(false);
     }

@@ -18,7 +18,7 @@ interface CardProps {
       padding: '3rem',
       maxWidth: '300px',
       margin: 'auto',
-      boxShadow: '-30px 30px   #394867',
+      boxShadow: '-14px 14px   #394867',
       borderRadius: '10px',
       marginBottom: '3rem',
     };

@@ -3,6 +3,8 @@ import Image from "next/image";
 const Footer: React.FC = () => {
   return (
     <footer className="bg-[#1E1E1E]">
+           <hr className="my-3 border-gray-200 sm:mx-auto dark:border-gray-700 " />
+
       <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
         <div className="md:flex md:justify-between">
           <div className="mb-6 md:mb-0">

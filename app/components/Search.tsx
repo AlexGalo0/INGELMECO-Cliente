@@ -8,8 +8,16 @@ const APPLICATION_ID = "8UD7UMU1WD";
 const SEARCH_API_KEY = "b0241e4997219d7d8be22a932109b074";
 
 const searchClient = algoliasearch(APPLICATION_ID, SEARCH_API_KEY);
+type HitType = {
+  objectID: string;
+  nombreProducto: string;
+  descripcionProducto: string;
+  categoriaProducto: string;
+  marcaProducto: string;
+  urlImagen: string;
 
-function Hit({ hit }) {
+};
+function Hit({ hit }: { hit: HitType }) {
   return (
     <div className="bg-[#1E1E1E] rounded-lg shadow-md p-4 mb-4 text-white max-w-sm">
        <div className="flex justify-center">

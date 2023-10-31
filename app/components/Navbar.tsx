@@ -48,9 +48,9 @@ const Navbar: React.FC = () => {
           <Link href="/productos" className="text-white font-bold lg:text-2xl">
             Productos
           </Link>
-          <a href="#" className="text-white font-bold lg:text-2xl">
+          <Link href="/" className="text-white font-bold lg:text-2xl">
             Sobre Nosotros
-          </a>
+          </Link>
         </div>
 
         <button
@@ -91,9 +91,9 @@ const Navbar: React.FC = () => {
             <Link href="/productos" className="text-white font-bold text-1xl my-4">
               Productos
             </Link>
-            <a href="#" className="text-white font-bold text-1xl my-4">
+            <Link href="/" className="text-white font-bold text-1xl my-4">
               Sobre Nosotros
-            </a>
+            </Link>
             
           </div>
         </div>

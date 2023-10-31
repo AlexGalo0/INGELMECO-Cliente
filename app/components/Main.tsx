@@ -3,7 +3,7 @@ import DisplayData from "./svgs/DisplayData";
 
 const Main: React.FC = () => {
   return (
-    <main>
+    <section>
       <div className="bg-[#1E1E1E] p-5 pt-8 lg:flex justify-evenly">
         <div className="w-full lg:w-1/2 mr-2 lg:mx-auto">
           <h2 className="text-[#048C88] text-4xl font-bold">Historia</h2>
@@ -108,7 +108,7 @@ const Main: React.FC = () => {
         </div>
 
       </div>
-    </main>
+    </section>
   );
 };
 

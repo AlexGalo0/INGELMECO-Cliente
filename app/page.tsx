@@ -8,9 +8,7 @@ const Conocenos: React.FC = () => {
     <div className="">
       <Navbar />
       <Main />
-      {/* <hr className="my-6  sm:mx-auto dark:border-gray-700 lg:my-8" /> */}
-        <Footer />
-    
+      <Footer />
     </div>
   );
 };

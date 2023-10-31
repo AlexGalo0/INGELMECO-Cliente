@@ -88,9 +88,9 @@ const Navbar: React.FC = () => {
             <a href="#" className="text-white font-bold text-1xl my-4">
               Categorias
             </a>
-            <a href="#" className="text-white font-bold text-1xl my-4">
+            <Link href="/productos" className="text-white font-bold text-1xl my-4">
               Productos
-            </a>
+            </Link>
             <a href="#" className="text-white font-bold text-1xl my-4">
               Sobre Nosotros
             </a>

@@ -9,9 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "algoliasearch": "^4.20.0",
     "next": "13.5.5",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "react-instantsearch": "^7.2.1"
   },
   "devDependencies": {
     "@svgr/webpack": "^8.1.0",

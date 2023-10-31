@@ -1,6 +1,8 @@
 "use client"
 import Image from "next/image";
+import Link from "next/link";
 import React, { useState, useEffect, useRef, MouseEvent } from "react";
+
 
 const Navbar: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -43,9 +45,9 @@ const Navbar: React.FC = () => {
           <a href="#" className="text-white font-bold lg:text-2xl">
             Categorias
           </a>
-          <a href="#" className="text-white font-bold lg:text-2xl">
+          <Link href="/productos" className="text-white font-bold lg:text-2xl">
             Productos
-          </a>
+          </Link>
           <a href="#" className="text-white font-bold lg:text-2xl">
             Sobre Nosotros
           </a>

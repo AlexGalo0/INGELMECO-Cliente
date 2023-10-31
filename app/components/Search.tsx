@@ -36,9 +36,9 @@ function Hit({ hit }: { hit: HitType }) {
 export default function Search() {
   return (
     <InstantSearch searchClient={searchClient} indexName="ingelmeco_productos">
-      <SearchBox className="search-bar" />
+      <SearchBox className="search-bar"  placeholder="Busca tu Producto"/>
       <div className="flex justify-center pt-8">
-        <Hits hitComponent={Hit} className="" />
+        <Hits hitComponent={Hit}  />
       </div>
       <div >
       <Pagination className="pagination" />

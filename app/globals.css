@@ -24,7 +24,7 @@
 .ais-SearchBox-submit {
   width: 100px;
   padding: 15px;
-  color: #c4c4c4;
+  color: #c4c4c450;
 }
 .search-bar {
   display: flex;
@@ -35,7 +35,8 @@ input {
   min-width: 500px;
   border: none;
   border-radius: 0.5em;
-  padding: 15px;
+  padding: 10px;
+  
 }
 
 /* ESTILOS QUE TAL VEZ SIRVEN IDK */

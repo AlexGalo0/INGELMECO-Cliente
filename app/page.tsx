@@ -6,9 +6,9 @@ import Footer from "./components/Footer";
 const Conocenos: React.FC = () => {
   return (
     <div className="">
-      <Navbar />
+      
       <Main />
-      <Footer />
+    
     </div>
   );
 };

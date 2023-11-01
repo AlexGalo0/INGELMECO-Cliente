@@ -51,6 +51,7 @@ export default function Search() {
       searchClient={searchClient}
       indexName="ingelmeco_productos"
       future={{ preserveSharedStateOnUnmount: true }}
+      
     >
       <SearchBox className="search-bar" />
       <div className="flex justify-center pt-8">

@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { useEffect, useState } from "react";
 import { doc, getDoc } from "firebase/firestore";
 import { db } from "../../firebase";
@@ -36,31 +36,55 @@ const Producto = ({ params }: { params: ParamsType }) => {
   }, [productosId]);
 
   if (producto === null) {
-    return <div>Cargando...</div>;
+    return <div className="min-h-[350px]">Cargando producto...</div>;
   }
 
   return (
-    <div className="min-h-[400px]">
-      {producto.urlImagen ? (
-        <Image src={producto.urlImagen} alt="Imagen de Producto" width={250} height={250} />
-      ) : (
-        <div>No existe imagen</div>
-      )}
-      <h1 className="text-black font-bold text-2xl">{producto.nombreProducto || "No existe"}</h1>
-      <p className="text-xl"> {producto.descripcionProducto || ""}</p>
-      <h3 className="text-black font-bold">Especificaciones</h3>
-      <h3>Categoria: {producto.categoriaProducto || ""}</h3>
-      <h3>Marca: {producto.marcaProducto || ""}</h3>
-      
-      <h1>SubCategoria: {producto.subcategoriaProducto || "No existe"}</h1>
-      <button className="bg-[#048C88] rounded-lg p-2 text-white font-bold">Preguntar por Whatsapp</button>
-      {producto.urlImagenSecundaria ? (
-        <Image src={producto.urlImagenSecundaria} alt="" width={100} height={100} />
-      ) : (
-        null
-      )}
+    <div className="bg-zinc-50 flex my-4">
+      <div className="w-2/3 p-4 pl-10">
+        {producto.urlImagen ? (
+          <div className="image-container">
+            <Image
+              src={producto.urlImagen}
+              alt="Imagen de Producto"
+              width={300}
+              height={300}
+              className="object-contain hover:scale-105 transition-all duration-100"
+            />
+          </div>
+        ) : (
+          <div>No existe imagen</div>
+       ) }
+        <div className="text-black font-bold text-2xl mt-4"> {/* Aumenta el tamaño de letra */}
+          Especificaciones
+        </div>
+        <p className="text-black font-bold text-lg"> {/* Aumenta el tamaño de letra */}
+          Categoria: <span className="font-normal text-base">{producto.categoriaProducto || ""}</span>
+        </p>
+        <h3 className="text-black font-bold text-lg"> {/* Aumenta el tamaño de letra */}
+          Marca: <span className="font-normal text-base">{producto.marcaProducto || ""}</span>
+        </h3>
+        {producto.subcategoriaProducto && (
+          <p className="text-black font-bold text-lg"> {/* Aumenta el tamaño de letra */}
+            Subcategoría:{" "}
+            <span className="font-normal text-base">{producto.subcategoriaProducto}</span>
+          </p>
+        )}
+      </div>
+      <div className="w-2/5 p-4">
+        <h1 className="text-black font-bold text-3xl my-4">
+          {producto.nombreProducto || ""}
+        </h1>
+        <p className="text-xl my-4">
+          {producto.descripcionProducto || "Producto vendido por INGELMECO"}
+        </p>
+        <button className="bg-[#048C88] rounded-lg p-2 text-white font-bold hover:scale-105 transition-all duration-100 my-4">
+          Preguntar por Whatsapp
+        </button>
+      </div>
     </div>
   );
+  
 };
 
 export default Producto;

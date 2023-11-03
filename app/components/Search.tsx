@@ -52,8 +52,8 @@ export default function Search() {
       future={{ preserveSharedStateOnUnmount: true }}
     >
       <SearchBox className="search-bar" />
-      <div className="bg-red-500">
-        <RefinementList attribute="marcaProducto" />
+      <div className="search-panel">
+        <RefinementList attribute="marcaProducto" escapeFacetValues={false}    />
       </div>
       <div className="bg-stone-100">
       <RefinementList attribute="categoriaProducto" />

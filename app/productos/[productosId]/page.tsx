@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { doc, getDoc } from "firebase/firestore";
 import { db } from "../../firebase";
 import Image from "next/image";
-
+import {Carousel} from '../../components/Carousel'
 type Producto = {
   nombreProducto: string | null;
   categoriaProducto: string | null;
@@ -45,15 +45,10 @@ const Producto = ({ params }: { params: ParamsType }) => {
       <div className="w-full md:w-1/2 p-4 pl-10">
         {/* Aumenta el margen izquierdo */}
         {producto.urlImagen ? (
-          <div className="image-container">
-            <Image
-              src={producto.urlImagen}
-              alt="Imagen de Producto"
-              width={900} // Establece el ancho deseado
-              height={900} // Establece el alto deseado
-              className="object-contain hover:scale-105 transition-all duration-100 w-full md:w-2/3 lg:w-1/2"
-            />
-          </div>
+         <Carousel
+         imageUrl1={producto.urlImagen || ''}
+         imageUrl2={producto.urlImagenSecundaria || null}
+       />
         ) : (
           <div>No existe imagen</div>
         )}

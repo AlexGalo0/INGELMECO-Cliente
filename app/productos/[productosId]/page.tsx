@@ -49,7 +49,7 @@ const Producto = ({ params }: { params: ParamsType }) => {
         if (navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/iPhone/i)  || navigator.userAgent.match(/iPad/i) ||navigator.userAgent.indexOf('Mobile') !== -1){
           // If on a mobile device, open the PDF in a new tab
           setMobile(true)
-          window.open(url, '_blank');
+          window.open(producto.urlPdf, '_blank');
         } else {
           // If on a desktop, trigger the download as before
           const a = document.createElement("a");
@@ -70,6 +70,7 @@ const Producto = ({ params }: { params: ParamsType }) => {
   if (producto === null) {
     return <LoadingSpinner />;
   }
+
   if(mobile){
     return <h1>Estas desde celular</h1>
   }

@@ -45,7 +45,7 @@ const Producto = ({ params }: { params: ParamsType }) => {
         const url = await getDownloadURL(pdfRef);
   
         // Check if the user is on a mobile device
-        if (window.navigator.userAgent.indexOf("Mobi") > -1) {
+        if (navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/iPhone/i)  || navigator.userAgent.match(/iPad/i) ){
           // If on a mobile device, open the PDF in a new tab
           window.open(url, '_blank');
         } else {

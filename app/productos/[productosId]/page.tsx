@@ -43,16 +43,22 @@ const Producto = ({ params }: { params: ParamsType }) => {
       try {
         const pdfRef = ref(storage, producto.urlPdf);
         const url = await getDownloadURL(pdfRef);
-
-       
-        const a = document.createElement("a");
-        a.href = url;
-        a.target = "_blank"; // Abre en una nueva ventana o pestaña (opcional)
-      
-        a.style.display = "none";
-        document.body.appendChild(a);
-        a.click();
-        document.body.removeChild(a);
+  
+        // Check if the user is on a mobile device
+        if (/Mobi|Android/i.test(navigator.userAgent)) {
+          // If on a mobile device, open the PDF in a new tab
+          window.open(url, '_blank');
+        } else {
+          // If on a desktop, trigger the download as before
+          const a = document.createElement("a");
+          a.href = url;
+          a.target = "_blank"; // Opens in a new tab (optional)
+  
+          a.style.display = "none";
+          document.body.appendChild(a);
+          a.click();
+          document.body.removeChild(a);
+        }
       } catch (error) {
         console.error("Error al descargar el archivo PDF:", error);
       }

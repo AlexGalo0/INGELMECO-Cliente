@@ -19,23 +19,12 @@ const Footer: React.FC = () => {
           </div>
           <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
             <div>
-              <h2 className="mb-6 text-sm font-semibold  uppercase text-white">
+              <ul className="mb-6 text-sm font-semibold  uppercase text-white">
                 Tienda Online
-              </h2>
+              </ul>
               <ul className=" text-gray-400 font-medium">
-                <li className="mb-4">
-                  <a href="https://flowbite.com/" className="hover:underline">
-                    Categorias
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://tailwindcss.com/"
-                    className="hover:underline"
-                  >
-                    Productos
-                  </a>
-                </li>
+                <li className="mb-4 hover:underline">Categorias</li>
+                <li className="hover:underline">Productos</li>
               </ul>
             </div>
             <div>
@@ -43,14 +32,7 @@ const Footer: React.FC = () => {
                 Perfil de la Empresa
               </h2>
               <ul className="text-gray-400 font-medium">
-                <li>
-                  <a
-                    href="https://discord.gg/4eeurUVvTy"
-                    className="hover:underline"
-                  >
-                    Sobre Nosotros
-                  </a>
-                </li>
+                <li>Sobre Nosotros</li>
               </ul>
             </div>
             <div>
@@ -60,7 +42,7 @@ const Footer: React.FC = () => {
               <ul className="text-gray-400 font-medium">
                 <li className="mb-4">
                   <a href="#" className="hover:underline">
-                    correo@correo.com
+                    ventas@ingelmeco.com
                   </a>
                 </li>
                 <li>
@@ -81,10 +63,7 @@ const Footer: React.FC = () => {
             </a>
           </span>
           <div className="flex mt-4 space-x-5 sm:justify-center sm:mt-0">
-            <a
-              href="#"
-              className="text-gray-500  hover:text-white"
-            >
+            <a href="#" className="text-gray-500  hover:text-white">
               <svg
                 className="w-4 h-4"
                 aria-hidden="true"

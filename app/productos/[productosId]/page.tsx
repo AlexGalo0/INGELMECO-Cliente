@@ -1,9 +1,10 @@
 "use client";
 import { useEffect, useState } from "react";
 import { doc, getDoc } from "firebase/firestore";
-import { db } from "../../firebase";
-import Image from "next/image";
+import { db , storage } from "../../firebase";
+
 import { Carousel } from "../../components/Carousel";
+import { getDownloadURL , ref } from "firebase/storage";
 type Producto = {
   nombreProducto: string | null;
   categoriaProducto: string | null;
@@ -22,7 +23,7 @@ interface ParamsType {
 const Producto = ({ params }: { params: ParamsType }) => {
   const { productosId } = params;
   const [producto, setProducto] = useState<Producto | null>(null);
-
+  
   useEffect(() => {
     const fetchProducts = async () => {
       const docRef = doc(db, "productos", productosId);
@@ -36,6 +37,26 @@ const Producto = ({ params }: { params: ParamsType }) => {
     };
     fetchProducts();
   }, [productosId]);
+  const handleDownloadPdf = async () => {
+    if (producto && producto.urlPdf) {
+      try {
+        const pdfRef = ref(storage, producto.urlPdf);
+        const url = await getDownloadURL(pdfRef);
+  
+        // Crear un enlace oculto para descargar el archivo PDF
+        const a = document.createElement("a");
+        a.href = url;
+        a.target = "_blank"; // Abre en una nueva ventana o pestaña (opcional)
+        a.download = "nombre-del-archivo.pdf"; // Nombre con el que se descargará el archivo.
+        a.style.display = "none";
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+      } catch (error) {
+        console.error("Error al descargar el archivo PDF:", error);
+      }
+    }
+  };
 
   if (producto === null) {
     return <div className="min-h-[350px]">Cargando producto...</div>;
@@ -96,9 +117,14 @@ const Producto = ({ params }: { params: ParamsType }) => {
               Preguntar por Whatsapp
             </button>
             {producto.urlPdf ? (
-              <button className="bg-[#048C88] rounded-lg p-2 text-white font-bold hover:scale-105 transition-all duration-100 my-4">
-                Descargar Ficha Tecnica
+              <>
+              <button className="bg-[#048C88] rounded-lg p-2 text-white font-bold hover:scale-105 transition-all duration-100 my-4"  onClick={handleDownloadPdf}>
+                Descargar Ficha Tecnica 
               </button>
+              <a href="">
+              {producto.urlPdf}
+              </a>
+              </>
             ) : null}
           </div>
         </div>

@@ -121,9 +121,7 @@ const Producto = ({ params }: { params: ParamsType }) => {
               <button className="bg-[#048C88] rounded-lg p-2 text-white font-bold hover:scale-105 transition-all duration-100 my-4"  onClick={handleDownloadPdf}>
                 Descargar Ficha Tecnica 
               </button>
-              <a href="">
-              {producto.urlPdf}
-              </a>
+              
               </>
             ) : null}
           </div>

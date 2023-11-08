@@ -38,6 +38,7 @@ const Producto = ({ params }: { params: ParamsType }) => {
     };
     fetchProducts();
   }, [productosId]);
+  const [mobile,setMobile] = useState<boolean>();
   const handleDownloadPdf = async () => {
     if (producto && producto.urlPdf) {
       try {
@@ -45,8 +46,9 @@ const Producto = ({ params }: { params: ParamsType }) => {
         const url = await getDownloadURL(pdfRef);
   
         // Check if the user is on a mobile device
-        if (navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/iPhone/i)  || navigator.userAgent.match(/iPad/i) ){
+        if (navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/iPhone/i)  || navigator.userAgent.match(/iPad/i) ||navigator.userAgent.indexOf('Mobile') !== -1){
           // If on a mobile device, open the PDF in a new tab
+          setMobile(true)
           window.open(url, '_blank');
         } else {
           // If on a desktop, trigger the download as before
@@ -67,6 +69,9 @@ const Producto = ({ params }: { params: ParamsType }) => {
 
   if (producto === null) {
     return <LoadingSpinner />;
+  }
+  if(mobile){
+    return <h1>Estas desde celular</h1>
   }
 
   return (

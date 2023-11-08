@@ -1,10 +1,11 @@
 "use client";
 import { useEffect, useState } from "react";
 import { doc, getDoc } from "firebase/firestore";
-import { db , storage } from "../../firebase";
+import { db, storage } from "../../firebase";
 
 import { Carousel } from "../../components/Carousel";
-import { getDownloadURL , ref } from "firebase/storage";
+import { getDownloadURL, ref } from "firebase/storage";
+import {LoadingSpinner} from "@/app/components/LoadingSpinner";
 type Producto = {
   nombreProducto: string | null;
   categoriaProducto: string | null;
@@ -23,7 +24,7 @@ interface ParamsType {
 const Producto = ({ params }: { params: ParamsType }) => {
   const { productosId } = params;
   const [producto, setProducto] = useState<Producto | null>(null);
-  
+
   useEffect(() => {
     const fetchProducts = async () => {
       const docRef = doc(db, "productos", productosId);
@@ -42,12 +43,12 @@ const Producto = ({ params }: { params: ParamsType }) => {
       try {
         const pdfRef = ref(storage, producto.urlPdf);
         const url = await getDownloadURL(pdfRef);
-  
-        // Crear un enlace oculto para descargar el archivo PDF
+
+       
         const a = document.createElement("a");
         a.href = url;
         a.target = "_blank"; // Abre en una nueva ventana o pestaña (opcional)
-        a.download = "nombre-del-archivo.pdf"; // Nombre con el que se descargará el archivo.
+      
         a.style.display = "none";
         document.body.appendChild(a);
         a.click();
@@ -59,36 +60,31 @@ const Producto = ({ params }: { params: ParamsType }) => {
   };
 
   if (producto === null) {
-    return <div className="min-h-[350px]">Cargando producto...</div>;
+    return <LoadingSpinner />;
   }
 
   return (
-    <div className="container mx-auto px-4">
+    <div className="mx-auto px-4 max-w-screen-lg">
       <div className="flex flex-wrap py-4">
         <div className="w-full md:w-1/2 p-4 pl-10">
-          {/* Aumenta el margen izquierdo */}
-
           {producto.urlImagen ? (
             <Carousel
-              imageUrl1={producto.urlImagen || ""}
-              imageUrl2={producto.urlImagenSecundaria || undefined}
+              imageUrl1={producto.urlImagen}
+              imageUrl2={producto.urlImagenSecundaria || ""}
             />
           ) : (
             <div>No existe imagen</div>
           )}
           <div className="text-black font-bold text-2xl mt-4">
-            {/* Aumenta el tamaño de letra */}
             Especificaciones
           </div>
           <p className="text-black font-bold text-lg">
-            {/* Aumenta el tamaño de letra */}
             Categoría:{" "}
             <span className="font-normal text-base">
               {producto.categoriaProducto || ""}
             </span>
           </p>
           <h3 className="text-black font-bold text-lg">
-            {/* Aumenta el tamaño de letra */}
             Marca:{" "}
             <span className="font-normal text-base">
               {producto.marcaProducto || ""}
@@ -96,7 +92,6 @@ const Producto = ({ params }: { params: ParamsType }) => {
           </h3>
           {producto.subcategoriaProducto && (
             <p className="text-black font-bold text-lg">
-              {/* Aumenta el tamaño de letra */}
               Subcategoría:{" "}
               <span className="font-normal text-base">
                 {producto.subcategoriaProducto}
@@ -105,23 +100,24 @@ const Producto = ({ params }: { params: ParamsType }) => {
           )}
         </div>
         <div className="w-full md:w-1/2 p-4">
-          {/* Elimina el margen derecho */}
           <h1 className="text-black font-bold text-3xl my-4">
             {producto.nombreProducto || ""}
           </h1>
           <p className="text-xl my-4">
             {producto.descripcionProducto || "Producto vendido por INGELMECO"}
           </p>
-          <div className="flex flex-col max-w-[300px]">
+          <div className="flex flex-col max-w-[250px]">
             <button className="bg-[#048C88] rounded-lg p-2 text-white font-bold hover:scale-105 transition-all duration-100 my-4">
               Preguntar por Whatsapp
             </button>
             {producto.urlPdf ? (
               <>
-              <button className="bg-[#048C88] rounded-lg p-2 text-white font-bold hover:scale-105 transition-all duration-100 my-4"  onClick={handleDownloadPdf}>
-                Descargar Ficha Tecnica 
-              </button>
-              
+                <button
+                  className="bg-[#048C88] rounded-lg p-2 text-white font-bold hover:scale-105 transition-all duration-100 my-4"
+                  onClick={handleDownloadPdf}
+                >
+                  Descargar Ficha Tecnica
+                </button>
               </>
             ) : null}
           </div>

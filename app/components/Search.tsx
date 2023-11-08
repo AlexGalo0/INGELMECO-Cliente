@@ -10,6 +10,7 @@ import {
   Pagination,
   RefinementList,
 } from "react-instantsearch";
+import { Panel } from "./Panel";
 
 const APPLICATION_ID = "8UD7UMU1WD";
 const SEARCH_API_KEY = "b0241e4997219d7d8be22a932109b074";
@@ -46,25 +47,48 @@ function Hit({ hit }: { hit: HitType }) {
 
 export default function Search() {
   return (
-    <InstantSearch
-      searchClient={searchClient}
-      indexName="ingelmeco_productos"
-      future={{ preserveSharedStateOnUnmount: true }}
-    >
-      <SearchBox className="search-bar" />
-      <div className="search-panel">
-        <RefinementList attribute="marcaProducto" escapeFacetValues={false}    />
-      </div>
-      <div className="bg-stone-100">
-      <RefinementList attribute="categoriaProducto" />
-      </div>
-      <div className="flex justify-center pt-8">
-        <Hits hitComponent={Hit} className="" />
-      </div>
+    <div className="">
+      <InstantSearch
+        searchClient={searchClient}
+        indexName="ingelmeco_productos"
+        future={{ preserveSharedStateOnUnmount: true }}
+      >
+        <div className="text-center bg-[#1E1E1E] ">
+          <div className="p-3">
+            <SearchBox
+              placeholder="Busca tus productos"
+              className="bg-[#1E1E1E] text-white  w-full"
+            />
+          </div>
+        </div>
+        {/* Contenedor de  Todo*/}
+        <div className="flex">
+          {/* Contenedor de Selectores */}
+          <div>
+            <Panel header="Marca">
+              <RefinementList
+                attribute="marcaProducto"
+                escapeFacetValues={false}
+                className="selectores"
+              />
+            </Panel>
 
-      <div className="pagination">
-        <Pagination showFirst={true} />
-      </div>
-    </InstantSearch>
+            <Panel header="Categoria">
+              <RefinementList
+                attribute="categoriaProducto"
+                className="selectores"
+              />
+            </Panel>
+          </div>
+          {/* Contenedor de Hits */}
+          <div className="pt-5">
+            <Hits hitComponent={Hit} className="pruebaHits" />
+          </div>
+        </div>
+        <div className="pagination">
+          <Pagination showFirst={true} />
+        </div>
+      </InstantSearch>
+    </div>
   );
 }

@@ -1,24 +1,21 @@
 "use client";
-import React, { useState } from "react";
 import Image from "next/image";
-import { StaticImport } from "next/dist/shared/lib/get-img-props";
+import React, { useState } from "react";
+
 interface CarouselProps {
   imageUrl1: string;
-  imageUrl2: string  | undefined;
+  imageUrl2: string;
 }
 
 export const Carousel: React.FC<CarouselProps> = ({ imageUrl1, imageUrl2 }) => {
   const [activeIndex, setActiveIndex] = useState(0);
-
   const carouselItems = [imageUrl1, imageUrl2].filter(Boolean);
-
   const handlePrevClick = () => {
     setActiveIndex(
       (prevIndex) =>
         (prevIndex - 1 + carouselItems.length) % carouselItems.length
     );
   };
-
   const handleNextClick = () => {
     setActiveIndex((prevIndex) => (prevIndex + 1) % carouselItems.length);
   };
@@ -34,15 +31,16 @@ export const Carousel: React.FC<CarouselProps> = ({ imageUrl1, imageUrl2 }) => {
             }`}
             data-carousel-item={activeIndex === index ? "active" : undefined}
           >
-            <img
+            <Image
               src={imageUrl}
-              className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+              className="absolute w-full object-contain"
               alt="..."
+              fill={true}
             />
           </div>
         ))}
       </div>
-      {imageUrl2 !== undefined && (
+      {imageUrl2 !== "" && (
         <div>
           <button
             type="button"

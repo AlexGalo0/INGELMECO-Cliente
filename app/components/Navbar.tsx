@@ -1,8 +1,7 @@
-"use client"
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState, useEffect, useRef, MouseEvent } from "react";
-
 
 const Navbar: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -30,23 +29,19 @@ const Navbar: React.FC = () => {
     <nav className="bg-[#1E1E1E] min-w-[350px]">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <div className="flex pt-2">
+          <Link href="/">
           <Image
             alt="Logo INGELMECO"
             src="/images/logo.png"
             width={240}
             height={51}
-          />
+            />
+            </Link>
         </div>
 
         <div className="space-x-8 hidden w-full md:block md:w-auto">
-          <a href="#" className="text-white font-bold lg:text-2xl sm:text-1xl">
-            Contáctanos
-          </a>
-          <a href="#" className="text-white font-bold lg:text-2xl">
-            Categorias
-          </a>
           <Link href="/productos" className="text-white font-bold lg:text-2xl">
-            Productos
+            Nuestros Productos
           </Link>
           <Link href="/" className="text-white font-bold lg:text-2xl">
             Sobre Nosotros
@@ -82,19 +77,15 @@ const Navbar: React.FC = () => {
           className="fixed top-0 right-0 h-screen w-3/5 bg-opacity-80 bg-[#1E1E1E] backdrop-blur"
         >
           <div className="h-screen flex flex-col justify-start p-4">
-            <a href="#" className="text-white font-bold text-1xl my-4">
-              Contáctanos
-            </a>
-            <a href="#" className="text-white font-bold text-1xl my-4">
-              Categorias
-            </a>
-            <Link href="/productos" className="text-white font-bold text-1xl my-4">
-              Productos
+            <Link
+              href="/productos"
+              className="text-white font-bold text-1xl my-4"
+            >
+              Nuestros Productos
             </Link>
             <Link href="/" className="text-white font-bold text-1xl my-4">
               Sobre Nosotros
             </Link>
-            
           </div>
         </div>
       )}

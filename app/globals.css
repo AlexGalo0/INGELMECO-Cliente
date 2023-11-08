@@ -2,15 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-.search-bar {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  min-width: 800px;
 
-  padding: 15px;
-  background-color: #1E1E1E
-}
 .ais-Pagination-list {
   display: flex;
   justify-content: center;
@@ -24,121 +16,41 @@
 .ais-SearchBox-submit {
   width: 100px;
   padding: 15px;
+  display: none;
   color: #c4c4c450;
 }
-.search-bar {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-}
+
 input {
-  min-width: 500px;
   border: none;
   border-radius: 0.5em;
   padding: 10px;
-  
+}
+
+
+@media screen and (max-width: 500px) {
+  input {
+    min-width: 100%;
+  }
+}
+
+
+@media screen and (min-width: 501px) {
+  input {
+    min-width: 500px;
+  }
 }
 .pagination {
   margin: 2rem auto;
   text-align: center;
 }
-body,
-h1 {
-  margin: 0;
-  padding: 0;
-}
 
-body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
-    Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-}
-
-em {
-  background: cyan;
-  font-style: normal;
-}
-
-.header {
+.selectores{
+  background-color: red;
   display: flex;
-  align-items: center;
-  min-height: 50px;
-  padding: 0.5rem 1rem;
-  background-image: linear-gradient(to right, #8e43e7, #00aeff);
-  color: #fff;
-  margin-bottom: 1rem;
+  justify-content: flex-start;
+  padding-left: 0px;
 }
+.pruebaHits{
+  display: grid;
 
-.header a {
-  color: #fff;
-  text-decoration: none;
 }
-
-.header-title {
-  font-size: 1.2rem;
-  font-weight: normal;
-}
-
-.header-title::after {
-  content: ' ▸ ';
-  padding: 0 0.5rem;
-}
-
-.header-subtitle {
-  font-size: 1.2rem;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 1rem;
-}
-
-.search-panel {
-  display: flex;
-}
-
-.search-panel__filters {
-  flex: 1;
-}
-
-.search-panel__results {
-  flex: 3;
-}
-
-.searchbox {
-  margin-bottom: 2rem;
-}
-
-.pagination {
-  margin: 2rem auto;
-  text-align: center;
-}
-
-/* ESTILOS QUE TAL VEZ SIRVEN IDK */
-/* .card {
-  background-color: #f9f9f9;
-  display: flex;
-  border-radius: 10px;
-  margin: 20px;
-  padding: 15px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-.card-contents {
-  margin-left: 20px;
-  display: flex;
-  align-content: center;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.card-title {
-  font-weight: bold;
-}
-.card-genre > span {
-  font-size: 15px;
-  width: 20px;
-  padding: 4px;
-  /* margin: 2px; */
-
-  /* background-color: #c4c4c4; */
-/* } */
- /* */ 

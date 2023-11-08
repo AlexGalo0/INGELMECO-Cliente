@@ -1,21 +1,22 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-[#1E1E1E]">
+    <footer className="bg-[#1E1E1E] fixed-bottom ">
       <hr className="my-3  sm:mx-auto border-gray-700 " />
 
       <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
         <div className="md:flex md:justify-between">
           <div className="mb-6 md:mb-0">
-            <a href="https://flowbite.com/" className="flex items-center">
+            <Link href="/">
               <Image
                 alt="Logo INGELMECO"
                 src="/images/logo.png"
                 width={210}
                 height={51}
               />
-            </a>
+            </Link>
           </div>
           <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
             <div>
@@ -23,8 +24,9 @@ const Footer: React.FC = () => {
                 Tienda Online
               </ul>
               <ul className=" text-gray-400 font-medium">
-                <li className="mb-4 hover:underline">Categorias</li>
-                <li className="hover:underline">Productos</li>
+                <Link href="/productos">
+                  <li className="hover:underline">Productos</li>
+                </Link>
               </ul>
             </div>
             <div>
@@ -32,7 +34,9 @@ const Footer: React.FC = () => {
                 Perfil de la Empresa
               </h2>
               <ul className="text-gray-400 font-medium">
-                <li>Sobre Nosotros</li>
+                <Link href="/">
+                <li className="hover:underline">Sobre Nosotros</li>
+                </Link>
               </ul>
             </div>
             <div>
@@ -45,11 +49,35 @@ const Footer: React.FC = () => {
                     ventas@ingelmeco.com
                   </a>
                 </li>
-                <li>
-                  <a href="#" className="hover:underline">
-                    +Boton Whatsapp
-                  </a>
-                </li>
+                <div className="flex items-center">
+                  <li className="">
+                    <a href="#" className="hover:underline">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="h-5 w-5 mr-2"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.570-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.470-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.200-.296.300-.495.099-.198.050-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.510l-.570-.010c-.198 0-.520.074-.792.372s-1.040 1.016-1.040 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.200 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.360.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.290.173-1.414z" />
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.facebook.com/p/Ingenieria-Electrica-Mecanica-y-de-Construccion-100066811322847/?locale=es_LA"
+                      className="hover:underline"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="h-5 w-5"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
+                      </svg>
+                    </a>
+                  </li>
+                </div>
               </ul>
             </div>
           </div>
@@ -62,44 +90,6 @@ const Footer: React.FC = () => {
               INGELMECO
             </a>
           </span>
-          <div className="flex mt-4 space-x-5 sm:justify-center sm:mt-0">
-            <a href="#" className="text-gray-500  hover:text-white">
-              <svg
-                className="w-4 h-4"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="currentColor"
-                viewBox="0 0 8 19"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z"
-                  clipRule="evenodd"
-                />
-              </svg>
-              <span className="sr-only">Facebook page</span>
-            </a>
-
-            <a
-              href="#"
-              className="text-gray-500 hover:text-gray-900 dark:hover:text-white"
-            >
-              <svg
-                className="w-4 h-4"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M10 0a10 10 0 1 0 10 10A10.009 10.009 0 0 0 10 0Zm6.613 4.614a8.523 8.523 0 0 1 1.93 5.32 20.094 20.094 0 0 0-5.949-.274c-.059-.149-.122-.292-.184-.441a23.879 23.879 0 0 0-.566-1.239 11.41 11.41 0 0 0 4.769-3.366ZM8 1.707a8.821 8.821 0 0 1 2-.238 8.5 8.5 0 0 1 5.664 2.152 9.608 9.608 0 0 1-4.476 3.087A45.758 45.758 0 0 0 8 1.707ZM1.642 8.262a8.57 8.57 0 0 1 4.73-5.981A53.998 53.998 0 0 1 9.54 7.222a32.078 32.078 0 0 1-7.9 1.04h.002Zm2.01 7.46a8.51 8.51 0 0 1-2.2-5.707v-.262a31.64 31.64 0 0 0 8.777-1.219c.243.477.477.964.692 1.449-.114.032-.227.067-.336.1a13.569 13.569 0 0 0-6.942 5.636l.009.003ZM10 18.556a8.508 8.508 0 0 1-5.243-1.8 11.717 11.717 0 0 1 6.7-5.332.509.509 0 0 1 .055-.02 35.65 35.65 0 0 1 1.819 6.476 8.476 8.476 0 0 1-3.331.676Zm4.772-1.462A37.232 37.232 0 0 0 13.113 11a12.513 12.513 0 0 1 5.321.364 8.56 8.56 0 0 1-3.66 5.73h-.002Z"
-                  clipRule="evenodd"
-                />
-              </svg>
-              <span className="sr-only">Dribbble account</span>
-            </a>
-          </div>
         </div>
       </div>
     </footer>

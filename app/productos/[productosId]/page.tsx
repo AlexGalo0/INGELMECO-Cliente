@@ -75,7 +75,7 @@ const Producto = ({ params }: { params: ParamsType }) => {
   if(mobile){
     return <h1>Estas desde celular</h1>
   }
-  const phoneNumber = '98508147';
+  const phoneNumber = '94987477';
 
   return (
     <div className="mx-auto px-4 max-w-screen-lg">

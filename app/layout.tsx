@@ -10,7 +10,8 @@ export const metadata = {
       "/favicon.ico"
     ]
   },
-
+  keywords: "Distribuidora Ingelmeco, SIEMENS, INGELMECO, Distribuidores oficiales de SIEMENS INGELMECO",
+  
 };
 export default function RootLayout({
   children,

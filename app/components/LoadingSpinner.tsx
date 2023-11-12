@@ -2,7 +2,7 @@
 
 export const LoadingSpinner = () => {
   return (
-    <div className="flex justify-center items-center h-screen">
+    <div className="flex justify-center items-center h-screen max-h-[300px]">
     <div role="status">
       <svg
         aria-hidden="true"

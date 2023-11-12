@@ -1,5 +1,3 @@
-
-
 type PanelProps = React.PropsWithChildren<{
   header: string;
 }>;

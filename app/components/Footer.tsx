@@ -24,7 +24,7 @@ const Footer: React.FC = () => {
                 Tienda Online
               </ul>
               <ul className=" text-gray-400 font-medium">
-                <Link href="/productos">
+                <Link href="/">
                   <li className="hover:underline">Productos</li>
                 </Link>
               </ul>
@@ -34,7 +34,7 @@ const Footer: React.FC = () => {
                 Perfil de la Empresa
               </h2>
               <ul className="text-gray-400 font-medium">
-                <Link href="/">
+                <Link href="/Nosotros">
                   <li className="hover:underline">Sobre Nosotros</li>
                 </Link>
               </ul>

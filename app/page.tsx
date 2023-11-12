@@ -1,9 +1,13 @@
 import React from "react";
 
-import Main from "./components/Main";
+import Search from "./components/Search";
 
-const Conocenos: React.FC = () => {
-  return <Main />;
+const Productos: React.FC = () => {
+  return (
+    <main>
+      <Search />
+    </main>
+  );
 };
 
-export default Conocenos;
+export default Productos;

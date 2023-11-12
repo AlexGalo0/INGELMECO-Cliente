@@ -2,7 +2,6 @@
 import algoliasearch from "algoliasearch";
 import Image from "next/image";
 import Link from "next/link";
-
 import {
   InstantSearch,
   SearchBox,
@@ -52,8 +51,8 @@ export default function Search() {
         searchClient={searchClient}
         indexName="ingelmeco_productos"
         future={{ preserveSharedStateOnUnmount: true }}
-      > 
-      {/* Input de Buscador (SearchBox) */}
+      >
+        {/* Input de Buscador (SearchBox) */}
         <div className="text-center bg-[#1E1E1E] ">
           <div className="p-3">
             <SearchBox
@@ -66,7 +65,9 @@ export default function Search() {
         <div className="">
           {/* Contenedor de Selectores */}
           <div className="">
-            <Panel header="Marca"> {/* Titulo de los selectores */}
+            <Panel header="Marca">
+              {" "}
+              {/* Titulo de los selectores */}
               <RefinementList
                 attribute="marcaProducto"
                 escapeFacetValues={false}
@@ -74,11 +75,10 @@ export default function Search() {
               />
             </Panel>
 
-            <Panel header="Categoria"> {/* Titulo de los selectores */}
-              <RefinementList
-                attribute="categoriaProducto"
-                className=""
-              />
+            <Panel header="Categoria">
+              {" "}
+              {/* Titulo de los selectores */}
+              <RefinementList attribute="categoriaProducto" className="" />
             </Panel>
           </div>
           {/* Contenedor de Hits */}

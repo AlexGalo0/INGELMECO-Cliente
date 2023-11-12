@@ -30,20 +30,20 @@ const Navbar: React.FC = () => {
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <div className="flex pt-2">
           <Link href="/">
-          <Image
-            alt="Logo INGELMECO"
-            src="/images/logo.png"
-            width={240}
-            height={51}
+            <Image
+              alt="Logo INGELMECO"
+              src="/images/logo.png"
+              width={240}
+              height={51}
             />
-            </Link>
+          </Link>
         </div>
 
         <div className="space-x-8 hidden w-full md:block md:w-auto">
-          <Link href="/productos" className="text-white font-bold lg:text-2xl">
+          <Link href="/" className="text-white font-bold lg:text-2xl">
             Nuestros Productos
           </Link>
-          <Link href="/" className="text-white font-bold lg:text-2xl">
+          <Link href="/Nosotros" className="text-white font-bold lg:text-2xl">
             Sobre Nosotros
           </Link>
         </div>

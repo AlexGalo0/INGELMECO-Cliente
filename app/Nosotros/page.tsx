@@ -1,15 +1,21 @@
-import Card from "./Card";
-import DisplayData from "./svgs/DisplayData";
+import Card from "../components/Card";
+import DisplayData from "../components/svgs/DisplayData";
 
-const Main: React.FC = () => {
+const Nosotros: React.FC = () => {
   return (
     <section>
       <div className="bg-[#1E1E1E] p-5 pt-8 lg:flex justify-evenly">
         <div className="w-full lg:w-1/2 mr-2 lg:mx-auto">
           <h2 className="text-[#048C88] text-4xl font-bold">Historia</h2>
           <p className="text-white pt-5 max-w-[600px] text-lg pb-3">
-          Con más de dos décadas de historia, Ingelmeco se estableció en San Pedro Sula, Honduras, para liderar la ingeniería y la tecnología. Desde el inicio, hemos sido proveedores oficiales de Siemens, ofreciendo productos avanzados como contactores, guardamotores y PLCs. A lo largo de los años, hemos ampliado nuestra presencia y participado en proyectos clave en Honduras, contribuyendo al desarrollo industrial. Nos destacamos por nuestra dedicación a la calidad, innovación y servicio al cliente.
-
+            Con más de dos décadas de historia, Ingelmeco se estableció en San
+            Pedro Sula, Honduras, para liderar la ingeniería y la tecnología.
+            Desde el inicio, hemos sido proveedores oficiales de Siemens,
+            ofreciendo productos avanzados como contactores, guardamotores y
+            PLCs. A lo largo de los años, hemos ampliado nuestra presencia y
+            participado en proyectos clave en Honduras, contribuyendo al
+            desarrollo industrial. Nos destacamos por nuestra dedicación a la
+            calidad, innovación y servicio al cliente.
           </p>
         </div>
         <div className="w-full max-w-[400px] mx-auto overflow-hidden">
@@ -26,17 +32,20 @@ const Main: React.FC = () => {
             Nuestros Valores
           </h2>
           <p className="text-dark pt-3 text-lg mb-4">
-          En Ingelmeco, nuestros valores fundamentales son la brújula que guía nuestro actuar diario, tanto dentro como fuera de la empresa. Nos esforzamos por reflejar estos principios en cada aspecto de nuestro trabajo:
+            En Ingelmeco, nuestros valores fundamentales son la brújula que guía
+            nuestro actuar diario, tanto dentro como fuera de la empresa. Nos
+            esforzamos por reflejar estos principios en cada aspecto de nuestro
+            trabajo:
           </p>
         </div>
         <div className="flex flex-wrap justify-center">
-        <Card
+          <Card
             backgroundColor="#1E1E1E"
             imageSrc="/images/exito.png"
             textColor="#FFFFFF"
             title="Compromiso con el Cliente"
             description="Nuestros clientes son la piedra angular de nuestro negocio. 
-            Nos comprometemos a comprender sus necesidades, superar sus expectativas y construir relaciones a largo plazo basadas en la confianza."
+        Nos comprometemos a comprender sus necesidades, superar sus expectativas y construir relaciones a largo plazo basadas en la confianza."
           />
           <Card
             backgroundColor="#1E1E1E"
@@ -52,10 +61,9 @@ const Main: React.FC = () => {
             textColor="#FFFFFF"
             title="Integridad"
             description="Actuamos con integridad en todas nuestras interacciones. Mantenemos altos estándares éticos, siendo honestos y transparentes en cada decisión y acción.
-            "
+        "
           />
           <div className="mb-2"></div>
-          
         </div>
       </div>
 
@@ -65,9 +73,13 @@ const Main: React.FC = () => {
           {" "}
           {/* Ajustamos el ancho máximo para pantallas grandes */}
           <h2 className="text-white text-2xl font-bold">
-Nuestros Servicios en Ingelmeco</h2>
+            Nuestros Servicios en Ingelmeco
+          </h2>
           <p className="text-white pt-3 text-lg mb-4">
-          En Ingelmeco, nos dedicamos a proporcionar soluciones integrales en el campo de la ingeniería y la tecnología. Nuestra oferta de servicios abarca una amplia gama de áreas para satisfacer las necesidades cambiantes de nuestros clientes:
+            En Ingelmeco, nos dedicamos a proporcionar soluciones integrales en
+            el campo de la ingeniería y la tecnología. Nuestra oferta de
+            servicios abarca una amplia gama de áreas para satisfacer las
+            necesidades cambiantes de nuestros clientes:
           </p>
         </div>
         <div className="flex flex-wrap justify-center">
@@ -95,10 +107,9 @@ Nuestros Servicios en Ingelmeco</h2>
             description="Nuestro equipo altamente capacitado brinda un sólido soporte técnico para mantener el funcionamiento eficiente de los sistemas implementados."
           />
         </div>
-
       </div>
     </section>
   );
 };
 
-export default Main;
+export default Nosotros;

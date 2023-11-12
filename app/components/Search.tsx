@@ -64,13 +64,13 @@ export default function Search() {
         {/* Contenedor de  Todo*/}
         <div className="flex">
           {/* Contenedor de Selectores */}
-          <div className="max-w-[300px]">
+          <div className="test">
             <Panel header="Marca">
               <RefinementList
                 attribute="marcaProducto"
                 escapeFacetValues={false}
                 className="selectores"
-                style={{ maxWidth: "300px" }}
+               
               />
             </Panel>
 

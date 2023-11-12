@@ -26,6 +26,18 @@ input {
   padding: 10px;
   color: black;
 }
+.ais-RefinementList-item{
+ 
+}
+.ais-RefinementList-checkbox{
+  
+}
+.ais-RefinementList-labelText{
+  color: red;
+}
+.ais-RefinementList-count{
+  padding-left: 10px;
+}
 
 
 @media screen and (max-width: 500px) {
@@ -33,6 +45,8 @@ input {
     min-width: 100%;
   }
 }
+
+
 
 
 @media screen and (min-width: 501px) {
@@ -46,10 +60,7 @@ input {
 }
 
 .selectores{
-  background-color: red;
-  display: flex;
-  justify-content: flex-start;
-  padding-left: 0px;
+
 }
 .pruebaHits{
   display: grid;

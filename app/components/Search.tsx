@@ -47,12 +47,13 @@ function Hit({ hit }: { hit: HitType }) {
 
 export default function Search() {
   return (
-    <div className="">
+    <div className="m-0 mx-auto">
       <InstantSearch
         searchClient={searchClient}
         indexName="ingelmeco_productos"
         future={{ preserveSharedStateOnUnmount: true }}
-      >
+      > 
+      {/* Input de Buscador (SearchBox) */}
         <div className="text-center bg-[#1E1E1E] ">
           <div className="p-3">
             <SearchBox
@@ -62,28 +63,27 @@ export default function Search() {
           </div>
         </div>
         {/* Contenedor de  Todo*/}
-        <div className="flex">
+        <div className="">
           {/* Contenedor de Selectores */}
-          <div className="test">
-            <Panel header="Marca">
+          <div className="">
+            <Panel header="Marca"> {/* Titulo de los selectores */}
               <RefinementList
                 attribute="marcaProducto"
                 escapeFacetValues={false}
-                className="selectores"
-               
+                className=""
               />
             </Panel>
 
-            <Panel header="Categoria">
+            <Panel header="Categoria"> {/* Titulo de los selectores */}
               <RefinementList
                 attribute="categoriaProducto"
-                className="selectores"
+                className=""
               />
             </Panel>
           </div>
           {/* Contenedor de Hits */}
-          <div className="ml-[300px] pt-5">
-            <Hits hitComponent={Hit} className="pruebaHits" />
+          <div className="">
+            <Hits hitComponent={Hit} className="" />
           </div>
         </div>
         <div className="pagination">

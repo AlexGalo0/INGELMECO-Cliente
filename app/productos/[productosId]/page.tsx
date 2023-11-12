@@ -6,6 +6,7 @@ import { db, storage } from "../../firebase";
 import { Carousel } from "../../components/Carousel";
 import { getDownloadURL, ref } from "firebase/storage";
 import {LoadingSpinner} from "@/app/components/LoadingSpinner";
+import Link from "next/link";
 type Producto = {
   nombreProducto: string | null;
   categoriaProducto: string | null;
@@ -74,6 +75,7 @@ const Producto = ({ params }: { params: ParamsType }) => {
   if(mobile){
     return <h1>Estas desde celular</h1>
   }
+  const phoneNumber = '98508147';
 
   return (
     <div className="mx-auto px-4 max-w-screen-lg">
@@ -119,9 +121,11 @@ const Producto = ({ params }: { params: ParamsType }) => {
             {producto.descripcionProducto || "Producto vendido por INGELMECO"}
           </p>
           <div className="flex flex-col max-w-[250px]">
+            <Link href={`https://api.whatsapp.com/send?phone=${phoneNumber}`}>
             <button className="bg-[#048C88] rounded-lg p-2 text-white font-bold hover:scale-105 transition-all duration-100 my-4">
               Preguntar por Whatsapp
             </button>
+            </Link>
             {producto.urlPdf ? (
               <>
                 <button

@@ -86,7 +86,7 @@ const Footer: React.FC = () => {
         <div className="sm:flex sm:items-center sm:justify-between">
           <span className="text-sm  sm:text-center text-gray-400">
             © 2023{" "}
-            <a href="https://flowbite.com/" className="hover:underline">
+            <a href="#" className="hover:underline">
               INGELMECO
             </a>
           </span>

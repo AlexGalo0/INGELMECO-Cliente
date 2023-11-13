@@ -76,7 +76,7 @@ const Navbar: React.FC = () => {
       {menuOpen && (
         <div
           ref={menuRef}
-          className="fixed top-0 right-0 h-screen w-3/5 bg-opacity-80 bg-[#1E1E1E] backdrop-blur"
+          className="fixed top-0 right-0 h-screen z-20 w-3/5 bg-opacity-80 bg-[#1E1E1E] backdrop-blur"
         >
           <div className="h-screen flex flex-col justify-start p-4">
             <Link

@@ -41,7 +41,7 @@ const Nosotros: React.FC = () => {
         <div className="flex flex-wrap justify-center">
           <Card
             backgroundColor="#1E1E1E"
-            imageSrc="/images/exito.png"
+            imageSrc="/images/exito.webp"
             textColor="#FFFFFF"
             title="Compromiso con el Cliente"
             description="Nuestros clientes son la piedra angular de nuestro negocio. 
@@ -49,7 +49,7 @@ const Nosotros: React.FC = () => {
           />
           <Card
             backgroundColor="#1E1E1E"
-            imageSrc="/images/exito.png"
+            imageSrc="/images/exito.webp"
             textColor="#FFFFFF"
             title="Excelencia"
             description="Buscamos la excelencia en todo lo que hacemos. Desde la selección de productos hasta la ejecución de proyectos, nos esforzamos por alcanzar los más altos estándares."
@@ -57,7 +57,7 @@ const Nosotros: React.FC = () => {
           <div className="mb-2"></div>
           <Card
             backgroundColor="#1E1E1E"
-            imageSrc="/images/exito.png"
+            imageSrc="/images/exito.webp"
             textColor="#FFFFFF"
             title="Integridad"
             description="Actuamos con integridad en todas nuestras interacciones. Mantenemos altos estándares éticos, siendo honestos y transparentes en cada decisión y acción.
@@ -85,7 +85,7 @@ const Nosotros: React.FC = () => {
         <div className="flex flex-wrap justify-center">
           <Card
             backgroundColor="#FFFFFF"
-            imageSrc="/images/edit-tools.png"
+            imageSrc="/images/edit-tools.webp"
             textColor="#202020"
             title="Proyectos de Ingeniería"
             description="Nos especializamos en la ejecución de proyectos de ingeniería, desde la conceptualización hasta la implementación, asegurando resultados exitosos y a medida para cada cliente."
@@ -93,7 +93,7 @@ const Nosotros: React.FC = () => {
           <div className="mb-2"></div>
           <Card
             backgroundColor="#FFFFFF"
-            imageSrc="/images/edit-tools.png"
+            imageSrc="/images/edit-tools.webp"
             textColor="#202020"
             title="Elaboración de Paneles Eléctricos"
             description="Diseñamos y construimos paneles eléctricos a medida, garantizando la eficiencia y seguridad en el control de sistemas eléctricos."
@@ -101,7 +101,7 @@ const Nosotros: React.FC = () => {
           <div className="mb-2"></div>
           <Card
             backgroundColor="#FFFFFF"
-            imageSrc="/images/edit-tools.png"
+            imageSrc="/images/edit-tools.webp"
             textColor="#202020"
             title="Soporte Técnico"
             description="Nuestro equipo altamente capacitado brinda un sólido soporte técnico para mantener el funcionamiento eficiente de los sistemas implementados."

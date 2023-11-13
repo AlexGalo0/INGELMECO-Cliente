@@ -26,7 +26,7 @@ type HitType = {
 
 function Hit({ hit }: { hit: HitType }) {
   return (
-    <div className="bg-[#1E1E1E] rounded-lg shadow-md p-4 mb-4 text-white max-w-sm">
+    <div className="bg-[#1E1E1E] rounded-lg shadow-md p-4 h-full text-white max-w-sm">
       <div className="flex justify-center">
         {/*max-w-full h-auto   recomendadas por firebase*/}
         <Image src={hit.urlImagen} className="w-full h-36" alt="texto" width={900} height={100} priority />

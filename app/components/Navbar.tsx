@@ -78,12 +78,12 @@ const Navbar: React.FC = () => {
         >
           <div className="h-screen flex flex-col justify-start p-4">
             <Link
-              href="/productos"
+              href="/"
               className="text-white font-bold text-1xl my-4"
             >
               Nuestros Productos
             </Link>
-            <Link href="/" className="text-white font-bold text-1xl my-4">
+            <Link href="/Nosotros" className="text-white font-bold text-1xl my-4">
               Sobre Nosotros
             </Link>
           </div>

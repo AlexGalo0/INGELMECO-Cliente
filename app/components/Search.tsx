@@ -13,8 +13,8 @@ import { Panel } from "./Panel";
 
 const APPLICATION_ID = "8UD7UMU1WD";
 const SEARCH_API_KEY = "b0241e4997219d7d8be22a932109b074";
-
 const searchClient = algoliasearch(APPLICATION_ID, SEARCH_API_KEY);
+
 type HitType = {
   objectID: string;
   nombreProducto: string;
@@ -23,14 +23,16 @@ type HitType = {
   marcaProducto: string;
   urlImagen: string;
 };
+
 function Hit({ hit }: { hit: HitType }) {
   return (
-    <div className="bg-[#1E1E1E] rounded-lg shadow-md p-4 mb-4 text-white max-w-sm ">
+    <div className="bg-[#1E1E1E] rounded-lg shadow-md p-4 mb-4 text-white max-w-sm">
       <div className="flex justify-center">
-        <Image src={hit.urlImagen} alt="texto" width="200" height="200" />
+        {/*max-w-full h-auto   recomendadas por firebase*/}
+        <Image src={hit.urlImagen} className="w-full h-36" alt="texto" width={900} height={100} priority />
       </div>
-      <p className="text-2xl font-bold pt-2">{hit.nombreProducto}</p>
-      <p className="text-lg pt-5">{hit.descripcionProducto}</p>
+      <p className="text-xl font-bold pt-2">{hit.nombreProducto}</p>
+      {/* <p className="text-lg pt-5">{hit.descripcionProducto}</p> */}
       <p className="text-sm">Categoria: {hit.categoriaProducto}</p>
       <p className="text-sm">Marca: {hit.marcaProducto}</p>
       <div className="flex justify-center">
@@ -46,25 +48,22 @@ function Hit({ hit }: { hit: HitType }) {
 
 export default function Search() {
   return (
-    <div className="m-0 mx-auto">
+    <div className="flex min-h-screen mx-auto flex-col">
       <InstantSearch
         searchClient={searchClient}
         indexName="ingelmeco_productos"
         future={{ preserveSharedStateOnUnmount: true }}
       >
         {/* Input de Buscador (SearchBox) */}
-        <div className="text-center bg-[#1E1E1E] ">
-          <div className="p-3">
-            <SearchBox
-              placeholder="Busca tus productos"
-              className="bg-[#1E1E1E] text-white  w-full"
-            />
-          </div>
+        <div className="text-center py-2 bg-[#1E1E1E]">
+            <SearchBox placeholder="Busca tus productos"/>
         </div>
+
         {/* Contenedor de  Todo*/}
-        <div className="">
-          {/* Contenedor de Selectores */}
-          <div className="">
+        <div className="flex min-h-screen pt-5">
+
+          {/* Contenedor de Selectores  sidebar*/}
+          <div className="hidden sm:flex flex-col p-2 xl:items-start fixed h-full xl:ml-4">
             <Panel header="Marca">
               {" "}
               {/* Titulo de los selectores */}
@@ -81,11 +80,14 @@ export default function Search() {
               <RefinementList attribute="categoriaProducto" className="" />
             </Panel>
           </div>
+
           {/* Contenedor de Hits */}
-          <div className="">
-            <Hits hitComponent={Hit} className="" />
+          <div className="xl:ml-[330px] sm:ml-[250px] w-full">
+            <Hits hitComponent={Hit} />
           </div>
+
         </div>
+
         <div className="pagination">
           <Pagination showFirst={true} />
         </div>

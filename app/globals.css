@@ -2,6 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 
+/*Buscador*/
+.ais-SearchBox-input {
+  width: 35%;
+  padding: 5px;
+  border: none;
+  border-radius: 0.5em;
+  color: black;
+  background-color: #c4c4c450;
+  margin-bottom: 10px;
+}
+
+/*fin Buscador*/
+
+/*HITS*/
+.ais-Hits {
+  width: 100%;
+  padding: 1rem;
+}
+
+.ais-Hits-list {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  flex-wrap: wrap;
+}
+
+.ais-Hits-item {
+  height: auto;
+}
+
+/*HITS FIN*/
+
+
 .ais-Pagination-list {
   display: flex;
   justify-content: center;
@@ -31,8 +64,9 @@ input {
 }
 .ais-RefinementList-checkbox {
   color: blue;
-  
+  width: 10px;
 }
+
 .ais-RefinementList-labelText {
   padding-left: 0;
 }
@@ -40,7 +74,7 @@ input {
   padding-left: 10px;
 }
 
-@media screen and (max-width: 500px) {
+/* @media screen and (max-width: 500px) {
   input {
     min-width: 100%;
   }
@@ -51,7 +85,7 @@ input {
   input {
     min-width: 500px;
   }
-}
+} */
 .pagination {
   margin: 2rem auto;
   text-align: center;

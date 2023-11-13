@@ -31,19 +31,21 @@ const Navbar: React.FC = () => {
         <div className="flex pt-2">
           <Link href="/">
             <Image
+              className="cursor-pointer h-11 w-40"
               alt="Logo INGELMECO"
               src="/images/logo.png"
-              width={240}
-              height={51}
+              width={900}
+              height={100}
+              priority
             />
           </Link>
         </div>
 
         <div className="space-x-8 hidden w-full md:block md:w-auto">
-          <Link href="/" className="text-white font-bold lg:text-2xl">
+          <Link href="/" className="text-white font-bold lg:text-lg">
             Nuestros Productos
           </Link>
-          <Link href="/Nosotros" className="text-white font-bold lg:text-2xl">
+          <Link href="/Nosotros" className="text-white font-bold lg:text-lg">
             Sobre Nosotros
           </Link>
         </div>

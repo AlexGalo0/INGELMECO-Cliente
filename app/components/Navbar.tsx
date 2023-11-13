@@ -33,7 +33,7 @@ const Navbar: React.FC = () => {
             <Image
               className="cursor-pointer h-11 w-40"
               alt="Logo INGELMECO"
-              src="/images/logo.png"
+              src="/images/logo.webp"
               width={900}
               height={100}
               priority

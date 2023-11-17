@@ -3,12 +3,12 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 import { getStorage } from "firebase/storage";
 const firebaseConfig = {
-  apiKey: "AIzaSyBTCLkNBXmX9ibA7_ndC7R0h77RKXRZfyU",
-  authDomain: "test-admin-app-1cb81.firebaseapp.com",
-  projectId: "test-admin-app-1cb81",
-  storageBucket: "test-admin-app-1cb81.appspot.com",
-  messagingSenderId: "832034090698",
-  appId: "1:832034090698:web:974505253806289bdb8e33",
+  apiKey: "AIzaSyDirHONTWJJieYaQGpr5zL2MuULuVxwGNg",
+  authDomain: "ingelmeco-web-app.firebaseapp.com",
+  projectId: "ingelmeco-web-app",
+  storageBucket: "ingelmeco-web-app.appspot.com",
+  messagingSenderId: "263982003944",
+  appId: "1:263982003944:web:707fc70daf1520f9c6fb5d"
 };
 
 // Initialize Firebase

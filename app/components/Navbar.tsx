@@ -33,7 +33,7 @@ const Navbar: React.FC = () => {
             <Image
               className="cursor-pointer h-11 w-40"
               alt="Logo INGELMECO"
-              src="/images/logo.png"
+              src="/images/logo.webp"
               width={900}
               height={100}
               priority
@@ -76,16 +76,16 @@ const Navbar: React.FC = () => {
       {menuOpen && (
         <div
           ref={menuRef}
-          className="fixed top-0 right-0 h-screen w-3/5 bg-opacity-80 bg-[#1E1E1E] backdrop-blur"
+          className="fixed top-0 right-0 h-screen z-20 w-3/5 bg-opacity-80 bg-[#1E1E1E] backdrop-blur"
         >
           <div className="h-screen flex flex-col justify-start p-4">
             <Link
-              href="/productos"
+              href="/"
               className="text-white font-bold text-1xl my-4"
             >
               Nuestros Productos
             </Link>
-            <Link href="/" className="text-white font-bold text-1xl my-4">
+            <Link href="/Nosotros" className="text-white font-bold text-1xl my-4">
               Sobre Nosotros
             </Link>
           </div>

@@ -11,8 +11,8 @@ import {
 } from "react-instantsearch";
 import { Panel } from "./Panel";
 
-const APPLICATION_ID = "8UD7UMU1WD";
-const SEARCH_API_KEY = "b0241e4997219d7d8be22a932109b074";
+const APPLICATION_ID = "II7IZ0BHLU";
+const SEARCH_API_KEY = "e1c8eaa84d0b914b676608b0c858d5a7";
 const searchClient = algoliasearch(APPLICATION_ID, SEARCH_API_KEY);
 
 type HitType = {
@@ -29,10 +29,10 @@ function Hit({ hit }: { hit: HitType }) {
     <div className="bg-[#1E1E1E] rounded-lg shadow-md p-4 h-full text-white max-w-sm">
       <div className="flex justify-center">
         {/*max-w-full h-auto   recomendadas por firebase*/}
-        <Image src={hit.urlImagen} className="w-full h-36" alt="texto" width={900} height={100} priority />
+        <Image src={hit.urlImagen} className="w-full h-36 object-contain" alt="texto" width={900} height={100} loading="lazy" />
       </div>
       <p className="text-xl font-bold pt-2">{hit.nombreProducto}</p>
-      {/* <p className="text-lg pt-5">{hit.descripcionProducto}</p> */}
+      <p className="text-lg pt-5">{hit.descripcionProducto}</p>
       <p className="text-sm">Categoria: {hit.categoriaProducto}</p>
       <p className="text-sm">Marca: {hit.marcaProducto}</p>
       <div className="flex justify-center">
@@ -51,7 +51,7 @@ export default function Search() {
     <div className="flex min-h-screen mx-auto flex-col">
       <InstantSearch
         searchClient={searchClient}
-        indexName="ingelmeco_productos"
+        indexName="ingelmeco_web_productos"
         future={{ preserveSharedStateOnUnmount: true }}
       >
         {/* Input de Buscador (SearchBox) */}

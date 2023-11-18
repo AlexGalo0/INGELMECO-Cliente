@@ -35,6 +35,56 @@
 /*HITS FIN*/
 
 
+/*PANEL */
+
+span.text-lg.font-bold {
+  color: #202020;
+  border-bottom: 2px solid #048C88;
+}
+
+
+span {
+  color: #202020;
+}
+
+.ais-Panel-body {
+
+}
+
+.ais-RefinementList {
+
+}
+
+.ais-RefinementList-list {
+
+}
+.ais-RefinementList-item {
+  margin-left: 0px;
+  /* color: green; */
+}
+.ais-RefinementList-label {
+
+}
+
+.ais-RefinementList-checkbox {
+  color: blue;
+  width: 10px;
+}
+
+.ais-RefinementList-labelText {
+  padding-left: 0;
+}
+
+.ais-RefinementList-count {
+  padding-left: 10px;
+}
+
+/*PAGINATION*/
+.pagination {
+  margin: 2rem auto;
+  text-align: center;
+}
+
 .ais-Pagination-list {
   display: flex;
   justify-content: center;
@@ -42,6 +92,14 @@
 .ais-Pagination-item {
   margin: 5px;
 }
+
+.ais-Pagination-link{
+
+}
+/*PAGINATION FIN*/
+
+
+/*INPUT SEARCH*/
 .ais-SearchBox-reset {
   display: none;
 }
@@ -58,21 +116,8 @@ input {
   padding: 10px;
   color: black;
 }
-.ais-RefinementList-item {
-  margin-left: 0px;
-  /* color: green; */
-}
-.ais-RefinementList-checkbox {
-  color: blue;
-  width: 10px;
-}
+/*INPUT SEARCH FIN*/
 
-.ais-RefinementList-labelText {
-  padding-left: 0;
-}
-.ais-RefinementList-count {
-  padding-left: 10px;
-}
 
 /* @media screen and (max-width: 500px) {
   input {
@@ -86,7 +131,4 @@ input {
     min-width: 500px;
   }
 } */
-.pagination {
-  margin: 2rem auto;
-  text-align: center;
-}
+

@@ -62,8 +62,8 @@ export default function Search() {
         {/* Contenedor de  Todo*/}
         <div className="flex min-h-screen pt-5">
 
-          {/* Contenedor de Selectores  sidebar*/}
-          <div className="hidden sm:flex flex-col p-2 xl:items-start fixed h-full xl:ml-4">
+          {/* Contenedor de Selectores  sidebar  sm:flex flex-col p-3 xl:items-start fixed xl:ml-4*/}
+          <div className="flex flex-col ml-6 mr-20">
             <Panel header="Marca">
               {" "}
               {/* Titulo de los selectores */}
@@ -74,7 +74,7 @@ export default function Search() {
               />
             </Panel>
 
-            <Panel header="Categoria">
+            <Panel header="Categoría">
               {" "}
               {/* Titulo de los selectores */}
               <RefinementList attribute="categoriaProducto" className="" />
@@ -82,7 +82,7 @@ export default function Search() {
           </div>
 
           {/* Contenedor de Hits */}
-          <div className="xl:ml-[330px] sm:ml-[250px] w-full">
+          <div className="w-full">
             <Hits hitComponent={Hit} />
           </div>
 

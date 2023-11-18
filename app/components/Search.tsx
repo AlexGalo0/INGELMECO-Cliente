@@ -26,18 +26,30 @@ type HitType = {
 
 function Hit({ hit }: { hit: HitType }) {
   return (
-    <div className="bg-[#1E1E1E] rounded-lg shadow-md p-4 h-full text-white max-w-sm">
+    <div className="bg-[#202020] rounded-lg shadow-md p-4 h-full text-white max-w-sm">
       <div className="flex justify-center">
         {/*max-w-full h-auto   recomendadas por firebase*/}
-        <Image src={hit.urlImagen} className="w-full h-36 object-contain" alt="texto" width={900} height={100} loading="lazy" />
+        <Image src={hit.urlImagen} className="w-full h-36 object-contain" alt="producto-img" width={900} height={100} loading="lazy" />
       </div>
       <p className="text-xl font-bold pt-2">{hit.nombreProducto}</p>
-      <p className="text-lg pt-5">{hit.descripcionProducto}</p>
-      <p className="text-sm">Categoria: {hit.categoriaProducto}</p>
-      <p className="text-sm">Marca: {hit.marcaProducto}</p>
+      
+      <div className="flex items-center gap-3 py-2">
+        <span className="text-base">Categoria:</span>         
+        <p className="text-sm">
+          {hit.categoriaProducto}
+        </p>
+      </div>
+
+      <div className="flex items-center gap-3 py-2">
+        <span className="text-base">Marca:</span>         
+        <p className="text-sm">
+          {hit.marcaProducto}
+        </p>
+      </div>
+      
       <div className="flex justify-center">
         <Link href={`/productos/${hit.objectID}`}>
-          <button className="bg-[#048C88]  p-2 rounded-md transition-all duration-300 hover:scale-105 ">
+          <button className="bg-[#048C88] p-2 rounded-md transition-all duration-300 hover:scale-105 ">
             Ver Producto
           </button>
         </Link>
@@ -55,7 +67,7 @@ export default function Search() {
         future={{ preserveSharedStateOnUnmount: true }}
       >
         {/* Input de Buscador (SearchBox) */}
-        <div className="text-center bg-[#1E1E1E]">
+        <div className="text-center py-2 bg-[#1E1E1E]">
             <SearchBox placeholder="Busca tus productos"/>
         </div>
 

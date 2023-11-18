@@ -26,7 +26,7 @@ const Navbar: React.FC = () => {
   }, []);
 
   return (
-    <nav className="bg-[#1E1E1E] min-w-[350px]">
+    <nav className="bg-[#202020] min-w-[350px]">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <div className="flex pt-2">
           <Link href="/">

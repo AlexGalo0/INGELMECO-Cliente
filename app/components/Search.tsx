@@ -25,7 +25,6 @@ type HitType = {
 };
 
 function Hit({ hit }: { hit: HitType }) {
-  console.log(hit);
   return (
     <div className="bg-[#1E1E1E] rounded-lg shadow-md p-4 h-full text-white max-w-sm">
       <div className="flex justify-center">

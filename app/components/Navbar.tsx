@@ -42,10 +42,10 @@ const Navbar: React.FC = () => {
         </div>
 
         <div className="space-x-8 hidden w-full md:block md:w-auto">
-          <Link href="/" className="text-white font-bold lg:text-lg">
+          <Link href="/" className="text-white font-bold lg:text-base">
             Nuestros Productos
           </Link>
-          <Link href="/Nosotros" className="text-white font-bold lg:text-lg">
+          <Link href="/Nosotros" className="text-white font-bold lg:text-base">
             Sobre Nosotros
           </Link>
         </div>

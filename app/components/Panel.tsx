@@ -4,11 +4,13 @@ type PanelProps = React.PropsWithChildren<{
 
 export function Panel({ header, children }: PanelProps) {
   return (
-    <div className="">
-      <div className="">
-        <span className="text-lg font-bold">{header}</span>
+    <div className="mb-5">
+      <span className="w-full inline-block text-lg text-[#202020] font-bold border-b-2 border-b-[#048C88]">
+        {header}
+      </span>
+      <div className="ais-Panel-body">
+        {children}
       </div>
-      <div className="ais-Panel-body">{children}</div>
     </div>
   );
 }

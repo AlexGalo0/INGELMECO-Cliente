@@ -2,29 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
-/*Buscador*/
-.ais-SearchBox-input {
-  width: 35%;
-  padding: 5px;
-  border: none;
-  border-radius: 0.5em;
-  color: black;
-  background-color: #c4c4c450;
-  margin-bottom: 10px;
-}
-
-/*fin Buscador*/
-
 /*HITS*/
 .ais-Hits {
   width: 100%;
   padding: 1rem;
 }
 
+/* .ais-Hits-list {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+  flex-wrap: wrap;
+} */
 .ais-Hits-list {
   display: grid;
   gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   flex-wrap: wrap;
 }
 
@@ -36,44 +28,35 @@
 
 
 /*PANEL */
-
-span.text-lg.font-bold {
-  color: #202020;
-  border-bottom: 2px solid #048C88;
-}
-
-
-span {
-  color: #202020;
-}
-
 .ais-Panel-body {
-
+  width: 200px;
 }
-
 .ais-RefinementList {
-
+  width: 100%;
 }
 
 .ais-RefinementList-list {
-
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 .ais-RefinementList-item {
   margin-left: 0px;
-  /* color: green; */
 }
 .ais-RefinementList-label {
-
-}
-
-.ais-RefinementList-checkbox {
-  color: blue;
-  width: 10px;
+  width: 100%;
 }
 
 .ais-RefinementList-labelText {
   padding-left: 0;
 }
+
+.ais-RefinementList-checkbox {
+  color: blue;
+  width: 20px;
+  margin-right: 0.4rem;
+}
+
 
 .ais-RefinementList-count {
   padding-left: 10px;
@@ -94,12 +77,22 @@ span {
 }
 
 .ais-Pagination-link{
-
+ width: 100%;
 }
 /*PAGINATION FIN*/
 
 
 /*INPUT SEARCH*/
+.ais-SearchBox-input {
+  width: 35%;
+  padding: 5px;
+  border: none;
+  border-radius: 0.5em;
+  color: black;
+  background-color: #c4c4c450;
+  margin-bottom: 10px;
+}
+
 .ais-SearchBox-reset {
   display: none;
 }
@@ -119,16 +112,35 @@ input {
 /*INPUT SEARCH FIN*/
 
 
-/* @media screen and (max-width: 500px) {
-  input {
-    min-width: 100%;
+/* Pantallas extra grandes */
+@media screen and (min-width: 1200px) {
+  .ais-Hits-list {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
-
-@media screen and (min-width: 501px) {
-  input {
-    min-width: 500px;
+/* Pantallas grandes */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .ais-Hits-list {
+    grid-template-columns: repeat(3, 1fr);
   }
-} */
+}
+
+/* Pantallas medianas (Tablets) */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .ais-Hits-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .ais-SearchBox-input {
+    width: 80%;
+  }
+}
+
+/* Pantallas pequeñas (Celulares) */
+@media screen and (max-width: 767px) {
+  .ais-Hits-list {
+    grid-template-columns: 1fr;
+  }
+}
+
 

@@ -55,15 +55,14 @@ export default function Search() {
         future={{ preserveSharedStateOnUnmount: true }}
       >
         {/* Input de Buscador (SearchBox) */}
-        <div className="text-center py-2 bg-[#1E1E1E]">
+        <div className="text-center bg-[#1E1E1E]">
             <SearchBox placeholder="Busca tus productos"/>
         </div>
 
-        {/* Contenedor de  Todo*/}
-        <div className="flex min-h-screen pt-5">
+        {/* Contenedor de  Todo flex sm:flex-col md:flex-col lg:flex-col xl:flex-row*/}
+        <div className="grid 2xl:flex xl:flex md:flex min-h-screen pt-5">
 
-          {/* Contenedor de Selectores  sidebar  sm:flex flex-col p-3 xl:items-start fixed xl:ml-4*/}
-          <div className="flex flex-col ml-6 mr-20">
+          <div className="flex flex-col ml-6 mr-6">
             <Panel header="Marca">
               {" "}
               {/* Titulo de los selectores */}
@@ -81,7 +80,6 @@ export default function Search() {
             </Panel>
           </div>
 
-          {/* Contenedor de Hits */}
           <div className="w-full">
             <Hits hitComponent={Hit} />
           </div>

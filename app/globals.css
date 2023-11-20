@@ -124,6 +124,9 @@ body {
 } */
 /*INPUT SEARCH FIN*/
 
+.img-filter {
+  filter: drop-shadow(0 3px 7px rgb(0 0 0 / 1));
+}
 
 /* Pantallas extra grandes */
 @media screen and (min-width: 1200px) {

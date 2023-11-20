@@ -26,7 +26,7 @@ const Navbar: React.FC = () => {
   }, []);
 
   return (
-    <nav className="w-full flex flex-wrap items-center justify-between px-10 py-1 bg-[#202020]">
+    <nav className="w-full flex flex-wrap items-center justify-between px-3 lg:px-10  py-1 bg-[#202020]">
       <div className="flex pt-2">
         <Link href="/">
           <Image

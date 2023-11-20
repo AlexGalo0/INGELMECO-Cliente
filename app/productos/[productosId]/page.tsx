@@ -81,11 +81,11 @@ const Producto = ({ params }: { params: ParamsType }) => {
   return (
     <div className="mx-auto px-4 max-w-screen-lg">
       <div className="py-4">
-          <Link href="/" >
-          <svg className="w-16 h-16" xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 32 32"><path fill="#048C88" d="M21.87 9.814L15.685 16l6.187 6.188l-3.535 3.537L8.612 16l9.723-9.724z"/></svg>
-          </Link>
+        <Link href="/" >
+          <svg className="w-16 h-16" xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 32 32"><path fill="#048C88" d="M21.87 9.814L15.685 16l6.187 6.188l-3.535 3.537L8.612 16l9.723-9.724z" /></svg>
+        </Link>
       </div>
-      <div className="flex flex-wrap py-4">
+      <div className="flex flex-wrap my-4 shadow-2xl rounded-lg">
         <div className="w-full md:w-1/2 p-4 pl-10">
           {producto.urlImagen ? (
             <Carousel
@@ -95,37 +95,34 @@ const Producto = ({ params }: { params: ParamsType }) => {
           ) : (
             <div>No existe imagen</div>
           )}
-          <div className="text-black font-bold text-2xl mt-4">
-            Especificaciones
-          </div>
-          <p className="text-black font-bold text-lg">
+        </div>
+        <div className="w-full md:w-1/2 p-4">
+          <h1 className="text-[#202020] font-bold text-3xl my-4">
+            {producto.nombreProducto || ""}
+          </h1>
+          <h2 className="text-xl my-4">
+            {producto.descripcionProducto || "Producto vendido por INGELMECO"}
+          </h2>
+          <p className="text-[#202020] font-semibold text-lg">
             Categoría:{" "}
             <span className="font-normal text-base">
               {producto.categoriaProducto || ""}
             </span>
           </p>
-          <h3 className="text-black font-bold text-lg">
+          <h3 className="text-[#202020] font-semibold text-lg">
             Marca:{" "}
             <span className="font-normal text-base">
               {producto.marcaProducto || ""}
             </span>
           </h3>
           {producto.subcategoriaProducto && (
-            <p className="text-black font-bold text-lg">
+            <p className="text-[#202020] font-semibold text-lg">
               Subcategoría:{" "}
               <span className="font-normal text-base">
                 {producto.subcategoriaProducto}
               </span>
             </p>
           )}
-        </div>
-        <div className="w-full md:w-1/2 p-4">
-          <h1 className="text-black font-bold text-3xl my-4">
-            {producto.nombreProducto || ""}
-          </h1>
-          <h2 className="text-xl my-4">
-            {producto.descripcionProducto || "Producto vendido por INGELMECO"}
-          </h2>
           <div className="flex flex-col max-w-[250px]">
             <Link
               href={`https://api.whatsapp.com/send?phone=${94987477}`}
@@ -145,7 +142,7 @@ const Producto = ({ params }: { params: ParamsType }) => {
             </Link>
             {producto.urlPdf ? (
               <button
-                className="bg-[#048C88] rounded-lg p-2 text-white w-full hover:scale-105 transition-all duration-100 my-4 flex"
+                className="bg-[#048C88] rounded-lg p-2 text-white w-full hover:scale-105 transition-all duration-100 mt-1 flex"
                 onClick={handleDownloadPdf}
               >
                 <svg

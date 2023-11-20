@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+    Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+}
+
 /*HITS*/
 .ais-Hits {
   width: 100%;
@@ -21,7 +27,7 @@
 
 /*PANEL */
 .ais-Panel-body {
-  width: 200px;
+  width: 270px;
   font-weight: 400;
 }
 
@@ -34,9 +40,11 @@
   flex-direction: column;
   gap: 0.5rem;
 }
+
 .ais-RefinementList-item {
   margin-left: 0px;
 }
+
 .ais-RefinementList-label {
   width: 100%;
 }
@@ -52,7 +60,16 @@
 }
 
 .ais-RefinementList-count {
-  padding-left: 10px;
+  background: #F5F5FA;
+  border: 1px solid #B6B7D5;
+  border-radius: 50%;
+  color: #202020;
+  display: inline-flex; 
+  flex-shrink: 0;
+  font-size: 0.64rem;
+  overflow: hidden;
+  margin-left: .25rem;
+  padding: 0 .3rem;
 }
 
 /*PAGINATION*/
@@ -76,6 +93,9 @@
 
 
 /*INPUT SEARCH*/
+.ais-SearchBox-form {
+  border: none;
+}
 .ais-SearchBox-input {
   width: 35%;
   padding: 5px;
@@ -96,12 +116,12 @@
   color: #c4c4c450;
 }
 
-input {
+/* input {
   border: none;
   border-radius: 0.5em;
   padding: 10px;
   color: black;
-}
+} */
 /*INPUT SEARCH FIN*/
 
 
@@ -120,7 +140,7 @@ input {
 }
 
 /* Pantallas medianas (Tablets) */
-@media screen and (min-width: 768px) and (max-width: 991px) {
+@media screen and (min-width: 641px) and (max-width: 991px) {
   .ais-Hits-list {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -130,10 +150,10 @@ input {
 }
 
 /* Pantallas pequeñas (Celulares) */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 640px) {
   .ais-Hits-list {
     grid-template-columns: 1fr;
-    /* margin-left: 60px; */
+    margin: 0 auto;
   }
   .ais-SearchBox-input {
     width: 80%;

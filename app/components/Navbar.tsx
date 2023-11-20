@@ -26,52 +26,50 @@ const Navbar: React.FC = () => {
   }, []);
 
   return (
-    <nav className="bg-[#202020] min-w-[350px]">
-      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <div className="flex pt-2">
-          <Link href="/">
-            <Image
-              className="cursor-pointer h-11 w-40"
-              alt="Logo INGELMECO"
-              src="/images/logo.webp"
-              width={900}
-              height={100}
-              priority
-            />
-          </Link>
-        </div>
-
-        <div className="space-x-8 hidden w-full md:block md:w-auto">
-          <Link href="/" className="text-white font-bold lg:text-base">
-            Nuestros Productos
-          </Link>
-          <Link href="/Nosotros" className="text-white font-bold lg:text-base">
-            Sobre Nosotros
-          </Link>
-        </div>
-
-        <button
-          type="button"
-          className="ml-auto inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-          onClick={toggleMenu}
-        >
-          <svg
-            className="w-5 h-5"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 17 14"
-          >
-            <path
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M1 1h15M1 7h15M1 13h15"
-            />
-          </svg>
-        </button>
+    <nav className="w-full flex flex-wrap items-center justify-between px-10 py-1 bg-[#202020]">
+      <div className="flex pt-2">
+        <Link href="/">
+          <Image
+            className="cursor-pointer h-11 w-40"
+            alt="Logo INGELMECO"
+            src="/images/logo.webp"
+            width={900}
+            height={100}
+            priority
+          />
+        </Link>
       </div>
+
+      <div className="space-x-8 hidden w-full md:block md:w-auto">
+        <Link href="/" className="font-medium text-white">
+          Nuestros Productos
+        </Link>
+        <Link href="/Nosotros" className="font-medium text-white">
+          Sobre Nosotros
+        </Link>
+      </div>
+
+      <button
+        type="button"
+        className="ml-auto inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+        onClick={toggleMenu}
+      >
+        <svg
+          className="w-5 h-5"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 17 14"
+        >
+          <path
+            stroke="currentColor"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            d="M1 1h15M1 7h15M1 13h15"
+          />
+        </svg>
+      </button>
 
       {menuOpen && (
         <div

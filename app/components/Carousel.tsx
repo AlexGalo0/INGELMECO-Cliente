@@ -22,7 +22,7 @@ export const Carousel: React.FC<CarouselProps> = ({ imageUrl1, imageUrl2 }) => {
 
   return (
     <div className="relative w-full z-10" data-carousel="static">
-      <div className="relative h-56 overflow-hidden rounded-lg md:h-96">
+      <div className="relative h-56 overflow-hidden shadow-2xl rounded-lg md:h-96">
         {carouselItems.map((imageUrl, index) => (
           <div
             key={index}
@@ -34,7 +34,7 @@ export const Carousel: React.FC<CarouselProps> = ({ imageUrl1, imageUrl2 }) => {
             <Image
               src={imageUrl}
               className="absolute w-full object-contain"
-              alt="..."
+              alt={`img carousel ingelmeco ${index}`}
               fill={true}
               loading="lazy"
             />

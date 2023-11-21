@@ -13,15 +13,10 @@ const Card: React.FC<CardProps> = ({
   title,
   description,
 }) => {
+
   const cardStyle = {
     backgroundColor: backgroundColor,
-    padding: "3rem",
-    maxWidth: "300px",
-    margin: "auto",
-    boxShadow: "-14px 14px   #394867",
-    borderRadius: "10px",
-    marginBottom: "3rem",
-  };
+  }
 
   const titleStyle = {
     color: textColor,
@@ -32,25 +27,22 @@ const Card: React.FC<CardProps> = ({
   };
 
   return (
-    <div style={cardStyle} className="w-full md:w-1/3 px-4">
-      <div className="mb-3">
-        <div className="flex justify-center mb-4">
-          <Image
-            src={imageSrc}
-            width={90}
-            height={80}
-            alt="Valores de INGELMECO"
-          />
-        </div>
+    <div style={cardStyle} className="box-shadow-card ">
+      <div className="flex justify-center my-9">
+        <Image
+          className="w-20 h-20"
+          src={imageSrc}
+          width={900}
+          height={100}
+          alt={`INGELMECO - ${title}`}
+        />
       </div>
-      <h2 style={titleStyle} className="text-2xl font-bold mb-2">
+      <h2 style={titleStyle} className="text-2xl font-bold mb-2 px-4">
         {title}
       </h2>
-      <div className="max-w-[300px]">
-        <p style={descriptionStyle} className="text-lg">
-          {description}
-        </p>
-      </div>
+      <p style={descriptionStyle} className="text-lg px-4 pb-8">
+        {description}
+      </p>
     </div>
   );
 };

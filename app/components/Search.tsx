@@ -25,8 +25,8 @@ function Hit({ hit }: { hit: HitType }) {
     <div className="bg-[#202020] rounded-lg shadow-md p-4 h-full text-white max-w-sm flex flex-col">
 
       <div className="flex justify-center">
-        {/*max-w-full h-auto   recomendadas por firebase*/}
-        <Image src={hit.urlImagen} className="w-full h-36 object-contain" alt="producto-img" width={900} height={100} loading="lazy" />
+        {/*max-w-full h-auto   recomendadas por firebase  w-full h-36 object-contain*/}
+        <Image src={hit.urlImagen} className="max-w-full h-36 object-contain" alt="producto-img" width={900} height={100} loading="lazy" />
       </div>
       <p className="text-xl font-semibold pt-2">{hit.nombreProducto}</p>
 
@@ -80,15 +80,13 @@ export default function Search() {
               indexName="ingelmeco_web_productos"
               future={{ preserveSharedStateOnUnmount: true }}
             >
-              {/* Input de Buscador (SearchBox) */}
               <div className="text-center py-2 bg-[#202020]">
                 <SearchBox placeholder="Busca tus productos" />
               </div>
 
-              {/* Contenedor de  Todo flex sm:flex-col md:flex-col lg:flex-col xl:flex-row*/}
               <div className="grid 2xl:flex xl:flex md:flex min-h-screen pt-5">
 
-                <div className="flex flex-col ml-6 mr-6">
+                <div className="flex flex-col ml-4 mr-6">
                   <Panel header="Marca">
                     {" "}
                     {/* Titulo de los selectores */}
@@ -100,8 +98,6 @@ export default function Search() {
                   </Panel>
 
                   <Panel header="Categoría">
-                    {" "}
-                    {/* Titulo de los selectores */}
                     <RefinementList attribute="categoriaProducto" className="" />
                   </Panel>
                 </div>

@@ -80,9 +80,9 @@ const Producto = ({ params }: { params: ParamsType }) => {
 
   return (
     <div className="mx-auto px-4 max-w-screen-lg">
-      <div className="py-4">
-        <Link href="/" >
-          <svg className="w-16 h-16" xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 32 32"><path fill="#048C88" d="M21.87 9.814L15.685 16l6.187 6.188l-3.535 3.537L8.612 16l9.723-9.724z" /></svg>
+      <div className="pt-4">
+        <Link href="/">
+          <svg className="w-10 h-10" xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 24 24"><path fill="#048C88" d="M12.707 17.293L8.414 13H18v-2H8.414l4.293-4.293l-1.414-1.414L4.586 12l6.707 6.707z" /></svg>
         </Link>
       </div>
       <div className="flex flex-wrap my-4 shadow-2xl rounded-lg">

@@ -5,11 +5,11 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "start": "next start"
   },
   "dependencies": {
     "algoliasearch": "^4.20.0",
+    "encoding": "^0.1.13",
     "firebase": "^10.5.2",
     "next": "13.5.5",
     "react": "^18",

@@ -10,11 +10,11 @@ const Footer: React.FC = () => {
             <div className="mb-6 md:mb-0">
               <Link href="/">
                 <Image
-                  className="cursor-pointer h-11 w-40"
+                  className="cursor-pointer  w-40"
                   alt="Logo INGELMECO"
                   src="/images/logo.webp"
-                  width={900}
-                  height={100}
+                  width={1000}
+                  height={1}
                 />
               </Link>
             </div>

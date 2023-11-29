@@ -7,7 +7,7 @@ import Carousel from "../components/Carousel";
 const Inicio: React.FC = () => {
   return (
     <section>
-      <div className=" p-5 pt-8 lg:flex justify-evenly animate-fade-down animate-once animate-ease-linear">
+      <div className=" p-5 pt-8 lg:flex justify-evenly animate-fade-down animate-once animate-ease-linear ">
         <div className="w-full max-w-[600px] mx-auto overflow-hidden ">
           <Image
             alt="Imagen de Inicio de Producto"
@@ -23,7 +23,7 @@ const Inicio: React.FC = () => {
             </h1>
           </div>
 
-          <div className="pt-6">
+          <div className="pt-6 ">
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi
               culpa et, dolorem aut sapiente cupiditate consequatur. Quisquam
@@ -65,28 +65,27 @@ const Inicio: React.FC = () => {
       </div>
 
       {/* Sección de productos de SIEMENS */}
-      <div className="bg-[#202020] pt-3 text-center pb-7">
+      <div className="bg-[#202020] pt-3 text-center pb-12">
         <div className="mx-auto max-w-full lg:max-w-[800px] animate-fade-left animate-once animate-ease-linear">
           <h2 className=" text-2xl font-bold text-[#eee1e1] ">
-            SIEMENS Nuestra Especialidad
+            SIEMENS , Nuestra Especialidad
           </h2>
           <p className="text-dark p-4 text-lg text-[#eee1e1]">
             Uno de los principales orgullos para INGELMECO es ser los
             distribuidores oficiales de SIEMENS en Honduras , por lo cual
-            contamos con una amplia gama de produtos de la marca.
+            contamos con una amplia gama de productos de la marca.
           </p>
         </div>
         <div className="grid gap-10 px-14 2xl:gap-36 lg:gap-20 sm:grid-cols-2 lg:grid-cols-3 animate-fade-right animate-once animate-ease-linear">
           <div>
-
-          <Card
-            backgroundColor="#1E1E1E"
-            imageSrc="/images/exito.webp"
-            textColor="#FFFFFF"
-            title="Producto 1"
-            description={"Producto 1"}
+            <Card
+              backgroundColor="#1E1E1E"
+              imageSrc="/images/exito.webp"
+              textColor="#FFFFFF"
+              title="Producto 1"
+              description={"Producto 1"}
             />
-            </div>
+          </div>
           <Card
             backgroundColor="#1E1E1E"
             imageSrc="/images/exito.webp"

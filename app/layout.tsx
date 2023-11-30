@@ -4,8 +4,8 @@ import Footer from "./components/Footer";
 
 export const metadata = {
 
-  title: "Distribuidora Ingelmeco",
-  description: "Distribuidores oficiales de SIEMENS INGELMECO",
+  title: "Ingelmeco Distribuidores Oficiales de Siemens",
+  description: "Distribuidores oficiales de Siemens INGELMECO",
   icons :{
     icon:[
       "/favicon.ico"

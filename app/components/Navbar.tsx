@@ -26,21 +26,23 @@ const Navbar: React.FC = () => {
   }, []);
 
   return (
-    <nav className="w-full flex flex-wrap items-center justify-between px-3 lg:px-10  py-1 bg-[#202020]">
-      <div className="flex pt-2">
+    <nav className="w-full flex flex-wrap items-center justify-between px-3 lg:px-10  bg-[#202020]">
+      <div className="flex">
         <Link href="/">
           <Image
-            className="cursor-pointer h-11 w-40"
+            className="cursor-pointer  w-40"
             alt="Logo INGELMECO"
             src="/images/logo.webp"
-            width={900}
-            height={100}
-            priority
+            width={1000}
+            height={1}
           />
         </Link>
       </div>
 
       <div className="space-x-8 hidden w-full md:block md:w-auto">
+        <Link href="/inicio" className="font-medium text-white">
+          Inicio
+        </Link>
         <Link href="/" className="font-medium text-white">
           Nuestros Productos
         </Link>
@@ -77,14 +79,17 @@ const Navbar: React.FC = () => {
           className="fixed top-0 right-0 h-screen z-20 w-3/5 bg-opacity-80 bg-[#1E1E1E] backdrop-blur"
         >
           <div className="h-screen flex flex-col justify-start p-4">
+            <Link href="/inicio" className="text-white font-bold text-1xl my-4" >
+              <span onClick={toggleMenu}>Inicio</span>
+            </Link>
+            <Link href="/" className="text-white font-bold text-1xl my-4">
+            <span onClick={toggleMenu}>Nuestros Productos</span>
+            </Link>
             <Link
-              href="/"
+              href="/Nosotros"
               className="text-white font-bold text-1xl my-4"
             >
-              Nuestros Productos
-            </Link>
-            <Link href="/Nosotros" className="text-white font-bold text-1xl my-4">
-              Sobre Nosotros
+            <span onClick={toggleMenu}>Sobre Nosotros</span>
             </Link>
           </div>
         </div>

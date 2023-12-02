@@ -3,12 +3,12 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 import { getStorage } from "firebase/storage";
 const firebaseConfig = {
-  apiKey: "AIzaSyDirHONTWJJieYaQGpr5zL2MuULuVxwGNg",
-  authDomain: "ingelmeco-web-app.firebaseapp.com",
-  projectId: "ingelmeco-web-app",
-  storageBucket: "ingelmeco-web-app.appspot.com",
-  messagingSenderId: "263982003944",
-  appId: "1:263982003944:web:707fc70daf1520f9c6fb5d"
+  apiKey: process.env.NEXT_PUBLIC_API_KEY,
+  authDomain: process.env.NEXT_PUBLIC_AUTH_DOMAIN,
+  projectId: process.env.NEXT_PUBLIC_PROJECT_ID,
+  storageBucket: process.env.NEXT_PUBLIC_STORAGE_BUCKET,
+  messagingSenderId: process.env.NEXT_PUBLIC_MESSAGING_SENDER_ID,
+  appId: process.env.NEXT_PUBLIC_APP_ID,
 };
 
 // Initialize Firebase

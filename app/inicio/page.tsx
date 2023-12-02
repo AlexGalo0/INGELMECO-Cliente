@@ -24,12 +24,13 @@ const Inicio: React.FC = () => {
 
           <div className="pt-6 ">
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi
-              culpa et, dolorem aut sapiente cupiditate consequatur. Quisquam
-              voluptatibus omnis minima at illo? Beatae dolorem sunt quas nulla!
-              Exercitatim quibusdam. Quaerat officia quibusdam earum natus
-              assumenda, accusamus fuga maxime quasi velit sunt corrupti
-              asperiores beatae, atque magni.
+              En Ingelmeco damos vida a sus proyectos eléctricos. Como líderes
+              en la venta de productos eléctricos de primera calidad, desde
+              contactores hasta interruptores, nos destacamos por ofrecer
+              soluciones integrales. Desde proyectos solares hasta sistemas de
+              alta, media y baja tensión, estamos aquí para hacer que sus ideas
+              brillen. Explore nuestro catálogo y descubra cómo la experiencia
+              Ingelmeco marca la diferencia en cada conexión eléctrica.
             </p>
           </div>
           <div className="pt-6 flex justify-center items-center">
@@ -79,7 +80,7 @@ const Inicio: React.FC = () => {
             Su función es desconectar la alimentación en caso de sobrecarga, evitando daños al motor al monitorear y controlar las corrientes eléctricas."
             imageAlt="Interruptor de Siemens"
             imageSrc="/images/SiemensProducto1.jpeg"
-            title="Guardamoto"
+            title="Guardamotor"
           />
           <ProductCard
             description="Dispositivo de protección utilizado en sistemas eléctricos para monitorear la corriente que fluye hacia un motor. Su función principal es desconectar la alimentación si detecta corrientes excesivas, protegiendo así el motor contra posibles daños por sobrecarga."
@@ -162,8 +163,36 @@ const Inicio: React.FC = () => {
 
         {/* La sección de la cuadrícula no tiene contenido en tu ejemplo, 
           puedes agregar el contenido necesario según tus necesidades. */}
-        <div className="grid gap-10 px-4 2xl:px-16 lg:px-8 sm:grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3">
+        <div className=" pt-3 grid gap-10 px-4 2xl:px-16 lg:px-8 sm:grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3">
           {/* Contenido de la cuadrícula */}
+        </div>
+        {/* Seccion de Ubicacion */}
+        <div className=" p-5 pt-12 lg:flex justify-evenly animate-fade-down animate-once animate-ease-linear bg-[#202020]  ">
+          <div className="w-full max-w-[600px] mx-auto overflow-hidden pt-12">
+            <Image
+              alt="Instalaciones de Ingelmeco SIEMENS"
+              src={"/images/ubicacionIngelmeco.jpeg"}
+              width={2000}
+              height={2000}
+            ></Image>
+          </div>
+          <div className="w-full lg:w-1/2 mr-2 lg:mx-auto">
+            <div className="flex justify-center items-center">
+              <h1 className="pt-4 text-[#fafafa] text-2xl font-bold">
+                Encuentranos en: 
+              </h1>
+            </div>
+
+            <div className="">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3844.4396722193837!2d-88.03002479999999!3d15.514543300000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f665b97a4085d0b%3A0x19e4b7e28f006a33!2sINGELMECO!5e0!3m2!1ses-419!2shn!4v1701545263650!5m2!1ses-419!2shn"
+                width="600"
+                height="300"
+                style={{ border: 0, paddingLeft: "10%", paddingTop: "5%" }}
+                loading="lazy"
+              ></iframe>
+            </div>
+          </div>
         </div>
       </section>
     </main>

@@ -98,7 +98,7 @@ const Inicio: React.FC = () => {
       </section>
 
       {/* Sección de las Marcas */}
-      <section className="bg-[#eee1e1] pt-3 text-center pb-7 border-b-[30px]">
+      <section className="bg-white pt-3 text-center pb-7 border-b-[30px]">
         <div className="mx-auto max-w-full px-4 lg:px-8 xl:px-16">
           <h2 className="text-[rgb(30,30,30)] text-2xl font-bold mb-4 lg:mb-6">
             Nuestras Marcas

@@ -1,14 +1,13 @@
 import React from "react";
-import Card from "../components/Card";
 import Link from "next/link";
 import Image from "next/image";
-import Carousel from "../components/Carousel";
+import ProductCard from "../components/ProductCard";
 
 const Inicio: React.FC = () => {
   return (
-    <section>
+    <main>
       <div className=" p-5 pt-8 lg:flex justify-evenly animate-fade-down animate-once animate-ease-linear ">
-        <div className="w-full max-w-[600px] mx-auto overflow-hidden ">
+        <div className="w-full max-w-[600px] mx-auto overflow-hidden">
           <Image
             alt="Imagen de Inicio de Producto"
             src={"/images/PanelesInicio.jpg"}
@@ -19,7 +18,7 @@ const Inicio: React.FC = () => {
         <div className="w-full lg:w-1/2 mr-2 lg:mx-auto">
           <div className="flex justify-center items-center">
             <h1 className="pt-4 text-[#048C88] text-4xl font-bold">
-              Somos Ingelmeco
+              INGELMECO
             </h1>
           </div>
 
@@ -28,12 +27,9 @@ const Inicio: React.FC = () => {
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi
               culpa et, dolorem aut sapiente cupiditate consequatur. Quisquam
               voluptatibus omnis minima at illo? Beatae dolorem sunt quas nulla!
-              Exercitationem,mmodi sunt eveniet qui iusto eos odit minus vero
-              minima dolore ipsum beatae quibusdam reiciendis cupiditate
-              suscipit voluptatum illum. A ex fugit, magnam deleniti, doloribus,
-              optio incidunt fuga hic harum laudantium quibusdam. Quaerat
-              officia quibusdam earum natus assumenda, accusamus fuga maxime
-              quasi velit sunt corrupti asperiores beatae, atque magni.
+              Exercitatim quibusdam. Quaerat officia quibusdam earum natus
+              assumenda, accusamus fuga maxime quasi velit sunt corrupti
+              asperiores beatae, atque magni.
             </p>
           </div>
           <div className="pt-6 flex justify-center items-center">
@@ -65,7 +61,8 @@ const Inicio: React.FC = () => {
       </div>
 
       {/* Sección de productos de SIEMENS */}
-      <div className="bg-[#202020] pt-3 text-center pb-12">
+
+      <section className="bg-[#202020] pt-3 text-center pb-12">
         <div className="mx-auto max-w-full lg:max-w-[800px] animate-fade-left animate-once animate-ease-linear">
           <h2 className=" text-2xl font-bold text-[#eee1e1] ">
             SIEMENS , Nuestra Especialidad
@@ -73,97 +70,106 @@ const Inicio: React.FC = () => {
           <p className="text-dark p-4 text-lg text-[#eee1e1]">
             Uno de los principales orgullos para INGELMECO es ser los
             distribuidores oficiales de SIEMENS en Honduras , por lo cual
-            contamos con una amplia gama de productos de la marca.
+            contamos con un amplia gama de productos estrella de la marca.
           </p>
         </div>
-        <div className="grid gap-10 px-14 2xl:gap-36 lg:gap-20 sm:grid-cols-2 lg:grid-cols-3 animate-fade-right animate-once animate-ease-linear">
-          <div>
-            <Card
-              backgroundColor="#1E1E1E"
-              imageSrc="/images/exito.webp"
-              textColor="#FFFFFF"
-              title="Producto 1"
-              description={"Producto 1"}
-            />
-          </div>
-          <Card
-            backgroundColor="#1E1E1E"
-            imageSrc="/images/exito.webp"
-            textColor="#FFFFFF"
-            title="Producto 1"
-            description={"Producto 1"}
+        <div className="grid gap-10 px-14 2xl:gap-36 lg:gap-20 sm:grid-cols-2 lg:grid-cols-3 animate-fade-right animate-once animate-ease-linear  mx-auto">
+          <ProductCard
+            description="Disyuntor tamaño S3 para protección del motor, CLASE 10 Liberación A 45...63 A Nrelease 819 A terminal de tornillo Capacidad de conmutación estándar"
+            imageAlt="Interruptor de Siemens"
+            imageSrc="/images/SiemensProducto1.jpeg"
+            title="Interruptor"
           />
-          <Card
-            backgroundColor="#1E1E1E"
-            imageSrc="/images/exito.webp"
-            textColor="#FFFFFF"
-            title="Producto 1"
-            description={"Producto 1"}
+          <ProductCard
+            description="Relé de sobrecarga 70...90 A térmico para protección de motores tamaño S3,
+clase 10 para montar en contactor Circuito principal: atornillable circuito auxiliar:
+atornillable Rearme manual/automático"
+            imageAlt="Relé de Sobrecarga de Siemens"
+            imageSrc="/images/SiemensProducto2.jpg"
+            title="Relé de Sobrecarga"
+          />
+          <ProductCard
+            description="Contactor de potencia, AC-3e/AC-3 400 A, 200 kW / 400 V AC (50-60 Hz) / DC Uc: 220-
+240 V 3 polos, contactos auxiliares 2 NA + 2 NC accionamiento: circuito principal convencional:
+Control de barras colectoras y circuito auxiliar: terminal de tornillo
+"
+            imageAlt=""
+            imageSrc="/images/SiemensProducto3.jpeg"
+            title="Contactor"
           />
         </div>
-      </div>
+      </section>
 
       {/* Sección de las Marcas */}
-      <div className="bg-[#eee1e1] pt-3 text-center pb-7 border-b-[30px] ">
-        <div className="mx-auto max-w-full lg:max-w-[680px]">
-          <h2 className="text-[#1E1E1E] text-2xl font-bold px-3">
+      <section className="bg-[#eee1e1] pt-3 text-center pb-7 border-b-[30px]">
+        <div className="mx-auto max-w-full px-4 lg:px-8 xl:px-16">
+          <h2 className="text-[rgb(30,30,30)] text-2xl font-bold mb-4 lg:mb-6">
             Nuestras Marcas
           </h2>
           <p className="text-white p-4 text-lg"></p>
+          <div className="flex flex-wrap justify-center gap-5 sm:gap-8 md:gap-10 lg:gap-12 xl:gap-16">
+            <Image
+              src={"/images/ABBLogo.png"}
+              alt="Marcas de Inicio de Producto"
+              width={200}
+              height={200}
+              style={{ objectFit: "contain" }}
+            />
+            <Image
+              src={"/images/selecLogo.webp"}
+              alt="Marcas de Inicio de Producto"
+              width={200}
+              height={200}
+              style={{ objectFit: "contain" }}
+            ></Image>
+            <Image
+              src={"/images/logoSiemens.jpg"}
+              alt="Marcas de Inicio de Producto"
+              width={200}
+              height={200}
+              style={{ objectFit: "contain" }}
+            ></Image>
+
+            <Image
+              src={"/images/sibaLogo.webp"}
+              alt="Marcas de Inicio de Producto"
+              width={200}
+              height={200}
+              style={{ objectFit: "contain" }}
+            ></Image>
+
+            <Image
+              src={"/images/littleFuseLogo.webp"}
+              alt="Marcas de Inicio de Producto"
+              width={200}
+              height={200}
+              style={{ objectFit: "contain" }}
+            ></Image>
+
+            <Image
+              src={"/images/dataKom.png"}
+              alt="Marcas de Inicio de Producto"
+              width={200}
+              height={200}
+              style={{ objectFit: "contain" }}
+            ></Image>
+            <Image
+              src={"/images/electroniconLogo.webp"}
+              alt="Marcas de Inicio de Producto"
+              width={150}
+              height={150}
+              style={{ objectFit: "contain" }}
+            ></Image>
+          </div>
         </div>
-        <div className="grid gap-10 px-14 2xl:gap-36 lg:gap-20 sm:grid-cols-2 lg:grid-cols-3 ">
-          <Card
-            backgroundColor="#1E1E1E"
-            imageSrc="/images/edit-tools.webp"
-            textColor="#202020"
-            title="ABB"
-            description={""}
-          />
-          <Card
-            backgroundColor="#1E1E1E"
-            imageSrc="/images/edit-tools.webp"
-            textColor="#202020"
-            title="ABB"
-            description={""}
-          />
-          <Card
-            backgroundColor="#1E1E1E"
-            imageSrc="/images/edit-tools.webp"
-            textColor="#202020"
-            title="ABB"
-            description={""}
-          />
-          <Card
-            backgroundColor="#1E1E1E"
-            imageSrc="/images/edit-tools.webp"
-            textColor="#202020"
-            title="ABB"
-            description={""}
-          />
-          <Card
-            backgroundColor="#1E1E1E"
-            imageSrc="/images/edit-tools.webp"
-            textColor="#202020"
-            title="ABB"
-            description={""}
-          />{" "}
-          <Card
-            backgroundColor="#1E1E1E"
-            imageSrc="/images/edit-tools.webp"
-            textColor="#202020"
-            title="ABB"
-            description={""}
-          />{" "}
-          <Card
-            backgroundColor="#1E1E1E"
-            imageSrc="/images/edit-tools.webp"
-            textColor="#202020"
-            title="ABB"
-            description={""}
-          />
+
+        {/* La sección de la cuadrícula no tiene contenido en tu ejemplo, 
+          puedes agregar el contenido necesario según tus necesidades. */}
+        <div className="grid gap-10 px-4 2xl:px-16 lg:px-8 sm:grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3">
+          {/* Contenido de la cuadrícula */}
         </div>
-      </div>
-    </section>
+      </section>
+    </main>
   );
 };
 export default Inicio;

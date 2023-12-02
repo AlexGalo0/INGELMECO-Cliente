@@ -75,23 +75,20 @@ const Inicio: React.FC = () => {
         </div>
         <div className="grid gap-10 px-14 2xl:gap-36 lg:gap-20 sm:grid-cols-2 lg:grid-cols-3 animate-fade-right animate-once animate-ease-linear  mx-auto">
           <ProductCard
-            description="Disyuntor tamaño S3 para protección del motor, CLASE 10 Liberación A 45...63 A Nrelease 819 A terminal de tornillo Capacidad de conmutación estándar"
+            description="Dispositivo de protección para motores eléctricos.
+            Su función es desconectar la alimentación en caso de sobrecarga, evitando daños al motor al monitorear y controlar las corrientes eléctricas."
             imageAlt="Interruptor de Siemens"
             imageSrc="/images/SiemensProducto1.jpeg"
-            title="Interruptor"
+            title="Guardamoto"
           />
           <ProductCard
-            description="Relé de sobrecarga 70...90 A térmico para protección de motores tamaño S3,
-clase 10 para montar en contactor Circuito principal: atornillable circuito auxiliar:
-atornillable Rearme manual/automático"
+            description="Dispositivo de protección utilizado en sistemas eléctricos para monitorear la corriente que fluye hacia un motor. Su función principal es desconectar la alimentación si detecta corrientes excesivas, protegiendo así el motor contra posibles daños por sobrecarga."
             imageAlt="Relé de Sobrecarga de Siemens"
             imageSrc="/images/SiemensProducto2.jpg"
-            title="Relé de Sobrecarga"
+            title="Rele de Sobrecarga"
           />
           <ProductCard
-            description="Contactor de potencia, AC-3e/AC-3 400 A, 200 kW / 400 V AC (50-60 Hz) / DC Uc: 220-
-240 V 3 polos, contactos auxiliares 2 NA + 2 NC accionamiento: circuito principal convencional:
-Control de barras colectoras y circuito auxiliar: terminal de tornillo
+            description="Dispositivo eléctrico utilizado para controlar el flujo de corriente en un circuito eléctrico. Actúa como un interruptor electromagnético, permitiendo o interrumpiendo la corriente eléctrica a través de sus contactos.
 "
             imageAlt=""
             imageSrc="/images/SiemensProducto3.jpeg"

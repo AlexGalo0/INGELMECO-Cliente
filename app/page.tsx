@@ -114,22 +114,14 @@ const Inicio: React.FC = () => {
               style={{ objectFit: "contain" }}
             />
             <Image
-              src={"/images/selecLogo.webp"}
+              src={"/images/selecLogo.png"}
               alt="Marcas de Inicio de Producto"
               width={200}
               height={200}
               style={{ objectFit: "contain" }}
             ></Image>
             <Image
-              src={"/images/logoSiemens.jpg"}
-              alt="Marcas de Inicio de Producto"
-              width={200}
-              height={200}
-              style={{ objectFit: "contain" }}
-            ></Image>
-
-            <Image
-              src={"/images/sibaLogo.webp"}
+              src={"/images/logoSiemens.png"}
               alt="Marcas de Inicio de Producto"
               width={200}
               height={200}
@@ -137,7 +129,15 @@ const Inicio: React.FC = () => {
             ></Image>
 
             <Image
-              src={"/images/littleFuseLogo.webp"}
+              src={"/images/sibaLogo.png"}
+              alt="Marcas de Inicio de Producto"
+              width={200}
+              height={200}
+              style={{ objectFit: "contain" }}
+            ></Image>
+
+            <Image
+              src={"/images/littleFuseLogo.png"}
               alt="Marcas de Inicio de Producto"
               width={200}
               height={200}
@@ -152,10 +152,10 @@ const Inicio: React.FC = () => {
               style={{ objectFit: "contain" }}
             ></Image>
             <Image
-              src={"/images/electroniconLogo.webp"}
+              src={"/images/electroniconLogo.png"}
               alt="Marcas de Inicio de Producto"
-              width={150}
-              height={150}
+              width={200}
+              height={200}
               style={{ objectFit: "contain" }}
             ></Image>
           </div>

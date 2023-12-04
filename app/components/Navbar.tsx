@@ -40,10 +40,10 @@ const Navbar: React.FC = () => {
       </div>
 
       <div className="space-x-8 hidden w-full md:block md:w-auto">
-        <Link href="/inicio" className="font-medium text-white">
+        <Link href="/" className="font-medium text-white">
           Inicio
         </Link>
-        <Link href="/" className="font-medium text-white">
+        <Link href="/productos" className="font-medium text-white">
           Nuestros Productos
         </Link>
         <Link href="/Nosotros" className="font-medium text-white">
@@ -79,10 +79,10 @@ const Navbar: React.FC = () => {
           className="fixed top-0 right-0 h-screen z-20 w-3/5 bg-opacity-80 bg-[#1E1E1E] backdrop-blur"
         >
           <div className="h-screen flex flex-col justify-start p-4">
-            <Link href="/inicio" className="text-white font-bold text-1xl my-4" >
+            <Link href="/" className="text-white font-bold text-1xl my-4" >
               <span onClick={toggleMenu}>Inicio</span>
             </Link>
-            <Link href="/" className="text-white font-bold text-1xl my-4">
+            <Link href="/productos" className="text-white font-bold text-1xl my-4">
             <span onClick={toggleMenu}>Nuestros Productos</span>
             </Link>
             <Link

@@ -167,11 +167,13 @@ const Inicio: React.FC = () => {
           {/* Contenido de la cuadrícula */}
         </div>
         {/* Seccion de Ubicacion */}
+        
         <div className="p-5 pt-12 lg:flex justify-evenly animate-fade-down animate-once animate-ease-linear bg-[#202020]">
+    
           <div className="w-full lg:w-1/2 lg:mr-2">
-            <h1 className="pt-4 text-[#fafafa] text-3xl font-bold">
+            <h4 className="pt-4 text-[#057E79] text-3xl font-bold">
               Encuéntranos en:
-            </h1>
+            </h4>
 
             <div className="w-full max-w-[600px] mx-auto overflow-hidden pt-12">
               <div className="flex justify-center items-center">

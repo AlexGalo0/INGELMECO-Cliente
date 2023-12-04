@@ -27,7 +27,7 @@ const Footer: React.FC = () => {
 
               <ul className="mt-6 space-y-4 text-sm">
                 <li className="text-gray-300 transition hover:opacity-75 hover:underline">
-                  <Link href="/">
+                  <Link href="/productos">
                     Productos
                   </Link>
                 </li>

@@ -171,7 +171,7 @@ const Inicio: React.FC = () => {
         <div className="p-5 pt-12 lg:flex justify-evenly animate-fade-down animate-once animate-ease-linear bg-[#202020]">
     
           <div className="w-full lg:w-1/2 lg:mr-2">
-            <h4 className="pt-4 text-[#057E79] text-3xl font-bold">
+            <h4 className="pt-4 text-white text-3xl font-bold">
               Encuéntranos en:
             </h4>
 
@@ -185,7 +185,8 @@ const Inicio: React.FC = () => {
                     border: 0,
                     paddingLeft: "10%",
                     paddingTop: "5%",
-                    paddingBottom: "5%",
+                    paddingBottom: "10%",
+                    marginRight: "10%",
                   }}
                   loading="lazy"
                 ></iframe>

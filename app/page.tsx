@@ -11,8 +11,8 @@ const Inicio: React.FC = () => {
           <Image
             alt="Imagen de Inicio de Producto"
             src={"/images/PanelesInicio.jpg"}
-            width={2000}
-            height={2000}
+            width={900}
+            height={100}
           ></Image>
         </div>
         <div className="w-full lg:w-1/2 mr-2 lg:mx-auto">

@@ -60,7 +60,7 @@ const Footer: React.FC = () => {
               <ul className="mt-6 space-y-4 text-sm">
                 <li>
                   <a href="#" className="text-gray-300 transition hover:underline hover:opacity-75">
-                    (504) 9498-7477
+                    (+504) 9498-7477
                   </a>
                   
                 </li>

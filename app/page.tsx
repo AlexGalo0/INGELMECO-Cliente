@@ -11,6 +11,7 @@ const Inicio: React.FC = () => {
                     <Image
                         alt="Imagen de Inicio de Producto"
                         src={"/images/PanelesInicio.jpg"}
+                        className="shadow-2xl rounded"
                         width={900}
                         height={100}
                     />
@@ -73,8 +74,7 @@ const Inicio: React.FC = () => {
                 </div>
                 <div className="grid gap-10 px-14 2xl:gap-36 lg:gap-20 sm:grid-cols-2 lg:grid-cols-3 animate-fade-right animate-once animate-ease-linear  mx-auto">
                     <ProductCard
-                        description="Dispositivo de protección para motores eléctricos.
-            Su función es desconectar la alimentación en caso de sobrecarga, evitando daños al motor al monitorear y controlar las corrientes eléctricas."
+                        description="Dispositivo de protección para motores eléctricos. Su función es desconectar la alimentación en caso de sobrecarga, evitando daños al motor al monitorear y controlar las corrientes eléctricas."
                         imageAlt="Interruptor de Siemens"
                         imageSrc="/images/SiemensProducto1.jpeg"
                         title="Guardamotor"
@@ -155,7 +155,7 @@ const Inicio: React.FC = () => {
                 </div>
 
                 <div className="p-5 lg:grid justify-evenly animate-fade-down animate-once animate-ease-linear bg-[#202020]">
-                    <h4 className="text-white text-2xl font-bold">
+                    <h4 className="text-white text-2xl font-semibold">
                         Encuéntranos en San Pedro Sula
                     </h4>
                     <div className="lg:flex m-2">

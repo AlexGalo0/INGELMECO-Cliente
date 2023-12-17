@@ -86,8 +86,7 @@ const Inicio: React.FC = () => {
                         title="Rele de Sobrecarga"
                     />
                     <ProductCard
-                        description="Dispositivo eléctrico utilizado para controlar el flujo de corriente en un circuito eléctrico. Actúa como un interruptor electromagnético, permitiendo o interrumpiendo la corriente eléctrica a través de sus contactos.
-"
+                        description="Dispositivo eléctrico utilizado para controlar el flujo de corriente en un circuito eléctrico. Actúa como un interruptor electromagnético, permitiendo o interrumpiendo la corriente eléctrica a través de sus contactos."
                         imageAlt=""
                         imageSrc="/images/SiemensProducto3.jpeg"
                         title="Contactor"
@@ -155,39 +154,26 @@ const Inicio: React.FC = () => {
                     </div>
                 </div>
 
-                <div className="p-5 pt-12 lg:flex justify-evenly animate-fade-down animate-once animate-ease-linear bg-[#202020]">
-
-                    <div className="w-full lg:w-1/2 lg:mr-2">
-                        <h4 className="pt-4 text-white text-3xl font-bold">
-                            Encuéntranos en:
-                        </h4>
-
-                        <div className="w-full max-w-[600px] mx-auto overflow-hidden pt-12">
-                            <div className="flex justify-center items-center">
-                                <iframe
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3844.4396722193837!2d-88.03002479999999!3d15.514543300000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f665b97a4085d0b%3A0x19e4b7e28f006a33!2sINGELMECO!5e0!3m2!1ses-419!2shn!4v1701545263650!5m2!1ses-419!2shn"
-                                    width="100%"
-                                    height="300"
-                                    style={{
-                                        border: 0,
-                                        paddingLeft: "10%",
-                                        paddingTop: "5%",
-                                        paddingBottom: "10%",
-                                        marginRight: "10%",
-                                    }}
-                                    loading="lazy"
-                                ></iframe>
-                            </div>
+                <div className="p-5 lg:grid justify-evenly animate-fade-down animate-once animate-ease-linear bg-[#202020]">
+                    <h4 className="text-white text-2xl font-bold">
+                        Encuéntranos en San Pedro Sula
+                    </h4>
+                    <div className="lg:flex m-2">
+                        <div className="w-full lg:w-1/2">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3844.4396722193837!2d-88.03002479999999!3d15.514543300000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f665b97a4085d0b%3A0x19e4b7e28f006a33!2sINGELMECO!5e0!3m2!1ses-419!2shn!4v1701545263650!5m2!1ses-419!2shn"
+                                className="w-full h-full p-4"
+                                loading="lazy"
+                            ></iframe>
                         </div>
-                    </div>
 
-                    <div className="w-full lg:w-1/2 lg:ml-2">
-                        <div className="flex justify-center items-center">
+                        <div className="w-full lg:w-1/2">
                             <Image
                                 alt="Instalaciones de Ingelmeco SIEMENS"
                                 src={"/images/ubicacionIngelmeco.jpeg"}
-                                width={650}
-                                height={650}
+                                className="w-full h-full p-4"
+                                width={900}
+                                height={100}
                             />
                         </div>
                     </div>

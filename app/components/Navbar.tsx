@@ -33,7 +33,7 @@ const Navbar: React.FC = () => {
                         <Link className="block text-teal-600" href="/">
                             <span className="sr-only">Inicio</span>
                             <Image
-                                className="cursor-pointer w-36"
+                                className="cursor-pointer w-52"
                                 alt="Logo INGELMECO"
                                 src="/images/logo.webp"
                                 width={900}

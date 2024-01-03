@@ -81,7 +81,7 @@ const Producto = ({ params }: { params: ParamsType }) => {
     return (
         <div className="mx-auto px-4 max-w-screen-lg">
             <div className="pt-2">
-                <Link href="/">
+                <Link href="/productos">
                     <svg className="w-10 h-10" xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 24 24"><path fill="#048C88" d="M12.707 17.293L8.414 13H18v-2H8.414l4.293-4.293l-1.414-1.414L4.586 12l6.707 6.707z" /></svg>
                 </Link>
             </div>
